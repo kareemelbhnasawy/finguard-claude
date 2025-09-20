@@ -1,0 +1,8 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="60" height="60" rx="12" fill="#0B1A33"/>
+  <path d="M15 20h30v4H19v12h24v4H19v8h-4V20z" fill="white"/>
+  <circle cx="35" cy="35" r="6" fill="#0F766E"/>
+
+  <text x="75" y="35" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#0B1A33">Finguard</text>
+  <text x="75" y="50" font-family="Inter, sans-serif" font-size="12" font-weight="400" fill="#6B7280">Audit, Tax & Advisory</text>
+</svg>

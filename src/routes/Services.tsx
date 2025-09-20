@@ -39,7 +39,7 @@ const Services = () => {
       <div className="py-16">
         <div className="section-padding container-max">
           <div className="space-y-16">
-            {company.services.map((service, index) => (
+            {company.services.map((service) => (
               <section key={service.id} id={service.id} className="scroll-mt-32">
                 <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-8">
                   <div className="flex items-center mb-6">

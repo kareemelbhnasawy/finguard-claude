@@ -30,10 +30,17 @@ const Header = () => {
           <div className="flex items-center">
             <Link
               to="/"
-              className="text-2xl font-bold text-navy hover:text-navy/80 transition-colors focus-visible:focus-visible"
+              className="flex items-center hover:opacity-80 transition-opacity focus-visible:focus-visible"
               aria-label="Finguard home"
             >
-              {company.brand}
+              <img
+                src="/finguard-logo.png "
+                alt="Finguard Logo"
+                className="h-10 w-auto"
+              />
+              <span className="text-2xl font-bold text-navy">
+                {company.brand}
+              </span>
             </Link>
           </div>
 

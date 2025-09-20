@@ -25,7 +25,7 @@ const Hero = () => {
               </a>
               <Link
                 to={company.contact.ctas[1].href}
-                className="btn-secondary border-white text-white hover:bg-white hover:text-navy focus:ring-white focus:ring-offset-navy"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-navy px-6 py-3 rounded-lg font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-navy"
               >
                 {company.contact.ctas[1].label}
               </Link>

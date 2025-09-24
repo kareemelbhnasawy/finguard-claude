@@ -46,14 +46,14 @@ const ValueCard = ({ title, blurb }: ValueCardProps) => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
+    <div className="bg-slate-blue-gray p-6 rounded-lg shadow-sm border border-steel-blue hover:shadow-md transition-shadow duration-200">
       <div className="flex items-center mb-4">
-        <div className="flex-shrink-0 p-3 bg-navy/10 rounded-lg text-navy">
+        <div className="flex-shrink-0 p-3 bg-lime-green/10 rounded-lg text-lime-green">
           {getIcon(title)}
         </div>
-        <h3 className="ml-4 text-lg font-semibold text-navy">{title}</h3>
+        <h3 className="ml-4 text-lg font-semibold text-white">{title}</h3>
       </div>
-      <p className="text-gray-600 leading-relaxed">{blurb}</p>
+      <p className="text-white leading-relaxed">{blurb}</p>
     </div>
   );
 };

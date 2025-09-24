@@ -12,7 +12,7 @@ import NotFound from './routes/NotFound';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col bg-white">
+      <div className="min-h-screen flex flex-col bg-deep-navy">
         <Header />
         <main className="flex-grow">
           <Routes>

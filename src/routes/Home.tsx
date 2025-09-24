@@ -12,11 +12,11 @@ const Home = () => {
       <Hero />
 
       {/* Values Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-steel-blue">
         <div className="section-padding container-max">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-navy mb-4">Our Core Values</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4">Our Core Values</h2>
+            <p className="text-lg text-white max-w-2xl mx-auto">
               The principles that guide everything we do
             </p>
           </div>
@@ -29,11 +29,11 @@ const Home = () => {
       </section>
 
       {/* Services Preview */}
-      <section className="py-16">
+      <section className="py-16 bg-deep-navy">
         <div className="section-padding container-max">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-navy mb-4">Our Services</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4">Our Services</h2>
+            <p className="text-lg text-white max-w-3xl mx-auto">
               {company.servicesIntro}
             </p>
           </div>
@@ -51,11 +51,11 @@ const Home = () => {
       </section>
 
       {/* Social Proof */}
-      <section className="py-16 bg-navy text-white">
+      <section className="py-16 bg-steel-blue text-white">
         <div className="section-padding container-max">
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-6 text-white">Trusted by Industry Leaders</h2>
-            <p className="text-xl text-gray-200 mb-8">
+            <p className="text-xl text-white mb-8">
               Serving 300+ companies across multiple sectors
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">

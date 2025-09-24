@@ -7,8 +7,29 @@ export default {
   theme: {
     extend: {
       colors: {
-        'navy': '#0B1A33',
-        'ink': '#0B1A33',
+        // Primary Background / Surfaces
+        'deep-navy': '#15354A',
+        'light-gray': '#F3F3F3',
+
+        // Text / Content
+        'dark-navy': '#002036',
+        'near-black': '#192124',
+        'dark-slate-blue': '#113247',
+
+        // Headers / Secondary Backgrounds
+        'steel-blue': '#2A5066',
+        'slate-blue-gray': '#3D535C',
+
+        // Neutral UI / Dividers
+        'taupe-gray': '#877673',
+        'mid-gray': '#BDBDBD',
+
+        // Accents & Interactive Elements
+        'lime-green': '#72A343',
+
+        // Legacy colors (keeping for compatibility)
+        'navy': '#15354A', // Updated to match deep-navy
+        'ink': '#002036', // Updated to match dark-navy
         'teal': '#0F766E',
         'gold': '#D97706',
       },

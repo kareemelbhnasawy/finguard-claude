@@ -49,31 +49,31 @@ const ServiceCard = ({ id, title, bullets }: ServiceCardProps) => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200 h-full">
+    <div className="bg-slate-blue-gray p-6 rounded-lg shadow-sm border border-steel-blue hover:shadow-md transition-shadow duration-200 h-full">
       <div className="flex items-center mb-4">
-        <div className="flex-shrink-0 p-3 bg-teal/10 rounded-lg text-teal">
+        <div className="flex-shrink-0 p-3 bg-lime-green/10 rounded-lg text-lime-green">
           {getIcon(id)}
         </div>
-        <h3 className="ml-4 text-lg font-semibold text-navy">{title}</h3>
+        <h3 className="ml-4 text-lg font-semibold text-white">{title}</h3>
       </div>
       <ul className="space-y-2 mb-6 flex-grow">
         {bullets.slice(0, 3).map((bullet, index) => (
           <li key={index} className="flex items-start">
-            <svg className="h-5 w-5 text-teal mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <svg className="h-5 w-5 text-lime-green mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
-            <span className="text-gray-600 text-sm">{bullet}</span>
+            <span className="text-white text-sm">{bullet}</span>
           </li>
         ))}
         {bullets.length > 3 && (
-          <li className="text-gray-500 text-sm italic">
+          <li className="text-white text-sm italic">
             +{bullets.length - 3} more services
           </li>
         )}
       </ul>
       <Link
         to={`/services#${id}`}
-        className="inline-flex items-center text-teal hover:text-teal/80 font-medium text-sm transition-colors focus-visible:focus-visible"
+        className="inline-flex items-center text-lime-green hover:text-lime-green/80 font-medium text-sm transition-colors focus-visible:focus-visible"
       >
         Learn more
         <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">

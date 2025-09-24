@@ -23,7 +23,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-steel-blue shadow-sm sticky top-0 z-50">
       <nav className="section-padding container-max" aria-label="Main navigation">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -38,7 +38,7 @@ const Header = () => {
                 alt="Finguard Logo"
                 className="h-10 w-auto"
               />
-              <span className="text-2xl font-bold text-navy">
+              <span className="text-2xl font-bold text-white">
                 {company.brand}
               </span>
             </Link>
@@ -53,8 +53,8 @@ const Header = () => {
                   to={item.href}
                   className={`px-3 py-2 text-sm font-medium transition-colors focus-visible:focus-visible rounded-md ${
                     isActivePath(item.href)
-                      ? 'text-navy border-b-2 border-navy'
-                      : 'text-gray-600 hover:text-navy'
+                      ? 'text-lime-green border-b-2 border-lime-green'
+                      : 'text-white hover:text-lime-green'
                   }`}
                   aria-current={isActivePath(item.href) ? 'page' : undefined}
                 >
@@ -68,7 +68,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-navy hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-navy"
+              className="bg-steel-blue inline-flex items-center justify-center p-2 rounded-md text-white hover:text-lime-green hover:bg-slate-blue-gray focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lime-green"
               aria-expanded={isMenuOpen}
               aria-label="Toggle navigation menu"
             >
@@ -89,15 +89,15 @@ const Header = () => {
         {/* Mobile menu */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-steel-blue border-t border-slate-blue-gray">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
                   className={`block px-3 py-2 text-base font-medium transition-colors focus-visible:focus-visible rounded-md ${
                     isActivePath(item.href)
-                      ? 'text-navy bg-navy/5 border-l-4 border-navy'
-                      : 'text-gray-600 hover:text-navy hover:bg-gray-50'
+                      ? 'text-lime-green bg-lime-green/5 border-l-4 border-lime-green'
+                      : 'text-white hover:text-lime-green hover:bg-slate-blue-gray'
                   }`}
                   aria-current={isActivePath(item.href) ? 'page' : undefined}
                   onClick={() => setIsMenuOpen(false)}

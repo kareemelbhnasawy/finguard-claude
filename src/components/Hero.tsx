@@ -3,20 +3,20 @@ import { company } from '../data/company';
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-br from-navy to-navy/90 text-white">
+    <section className="bg-gradient-to-br from-deep-navy to-deep-navy/90 text-white">
       <div className="section-padding container-max">
         <div className="py-24 lg:py-32">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-balance text-white">
               {company.taglineShort}
             </h1>
-            <p className="text-xl lg:text-2xl mb-8 text-gray-200 text-balance max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl lg:text-2xl mb-8 text-white text-balance max-w-3xl mx-auto leading-relaxed">
               {company.about.split('.')[0]}.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href={company.contact.ctas[0].href}
-                className="btn-primary bg-white text-navy hover:bg-gray-100 focus:ring-white focus:ring-offset-navy inline-flex items-center"
+                className="btn-primary bg-lime-green text-white hover:bg-lime-green/90 focus:ring-lime-green focus:ring-offset-deep-navy inline-flex items-center"
               >
                 {company.contact.ctas[0].label}
                 <svg className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">

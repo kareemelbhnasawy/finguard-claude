@@ -7,7 +7,7 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 bg-gradient-to-r from-deep-navy/95 to-deep-navy/80">
         <img
-          src="../../public/hero-1.jpg"
+          src="/hero-1.jpg"
           alt="Professional financial consulting office environment"
           className="w-full h-full object-cover opacity-20"
         />

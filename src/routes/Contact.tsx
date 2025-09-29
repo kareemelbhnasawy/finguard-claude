@@ -7,11 +7,14 @@ const Contact = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-16 bg-deep-navy">
+      <section className="py-16 bg-white relative overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute top-8 right-8 w-20 h-20 bg-lime-green/10 rounded-full blur-xl"></div>
+        <div className="absolute bottom-8 left-8 w-16 h-16 bg-baby-blue/10 rounded-full blur-lg"></div>
         <div className="section-padding container-max">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl font-bold text-white mb-6">Contact Us</h1>
-            <p className="text-xl text-white leading-relaxed">
+            <h1 className="text-4xl font-bold text-navy mb-6">Contact Us</h1>
+            <p className="text-xl text-gray-600 leading-relaxed">
               Ready to discuss how we can support your business? Get in touch with our team today.
             </p>
           </div>
@@ -19,14 +22,14 @@ const Contact = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 bg-deep-navy">
+      <section className="py-16 bg-white">
         <div className="section-padding container-max">
           <div className="max-w-2xl mx-auto">
             {/* Contact Details */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-2xl font-bold text-white mb-6">Get in Touch</h2>
-                <p className="text-white mb-8">
+                <h2 className="text-2xl font-bold text-navy mb-6">Get in Touch</h2>
+                <p className="text-gray-600 mb-8">
                   Our team is ready to help you with expert audit, tax, and advisory services.
                   Contact us to discuss your specific needs and how we can support your business goals.
                 </p>
@@ -41,10 +44,10 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-semibold text-white">Phone</h3>
+                    <h3 className="text-lg font-semibold text-navy">Phone</h3>
                     <a
                       href={`tel:${company.contact.phone}`}
-                      className="text-white hover:text-lime-green transition-colors focus-visible:focus-visible"
+                      className="text-gray-600 hover:text-lime-green transition-colors focus-visible:focus-visible"
                     >
                       {company.contact.phone}
                     </a>
@@ -59,10 +62,10 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-semibold text-white">Email</h3>
+                    <h3 className="text-lg font-semibold text-navy">Email</h3>
                     <a
                       href={`mailto:${company.contact.email}`}
-                      className="text-white hover:text-lime-green transition-colors focus-visible:focus-visible"
+                      className="text-gray-600 hover:text-lime-green transition-colors focus-visible:focus-visible"
                     >
                       {company.contact.email}
                     </a>
@@ -77,8 +80,8 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-semibold text-white">Website</h3>
-                    <span className="text-white">{company.contact.website}</span>
+                    <h3 className="text-lg font-semibold text-navy">Website</h3>
+                    <span className="text-gray-600">{company.contact.website}</span>
                   </div>
                 </div>
 
@@ -91,8 +94,8 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-semibold text-white">Serving</h3>
-                    <span className="text-white">{company.geography}</span>
+                    <h3 className="text-lg font-semibold text-navy">Serving</h3>
+                    <span className="text-gray-600">{company.geography}</span>
                   </div>
                 </div>
               </div>
@@ -154,27 +157,27 @@ const Contact = () => {
       </section>
 
       {/* Business Hours */}
-      <section className="py-16 bg-deep-navy">
+      <section className="py-16 bg-light-gray">
         <div className="section-padding container-max">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-white mb-6">Business Hours</h2>
-            <div className="bg-slate-blue-gray p-8 rounded-lg shadow-sm border border-steel-blue">
+            <h2 className="text-2xl font-bold text-navy mb-6">Business Hours</h2>
+            <div className="bg-deep-navy p-8 rounded-lg shadow-sm border border-steel-blue">
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
-                  <span className="font-medium text-white">Monday - Thursday</span>
+                  <span className="font-medium text-baby-blue">Monday - Thursday</span>
                   <span className="text-white">9:00 AM - 6:00 PM</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="font-medium text-white">Friday</span>
+                  <span className="font-medium text-baby-blue">Friday</span>
                   <span className="text-white">9:00 AM - 5:00 PM</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="font-medium text-white">Saturday - Sunday</span>
+                  <span className="font-medium text-baby-blue">Saturday - Sunday</span>
                   <span className="text-white">Closed</span>
                 </div>
               </div>
               <div className="mt-6 pt-6 border-t border-steel-blue">
-                <p className="text-sm text-white">
+                <p className="text-sm text-baby-blue">
                   Emergency consultations available by appointment outside regular hours.
                 </p>
               </div>

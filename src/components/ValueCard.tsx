@@ -46,12 +46,12 @@ const ValueCard = ({ title, blurb }: ValueCardProps) => {
   };
 
   return (
-    <div className="bg-slate-blue-gray p-6 rounded-lg shadow-sm border border-steel-blue hover:shadow-md transition-shadow duration-200">
+    <div className="bg-gradient-to-br from-deep-navy via-slate-blue-gray to-deep-navy p-6 rounded-xl shadow-xl border border-lime-green/20 hover:shadow-2xl hover:glow-navy transition-all duration-500 transform hover:scale-105 shimmer group">
       <div className="flex items-center mb-4">
-        <div className="flex-shrink-0 p-3 bg-lime-green/10 rounded-lg text-lime-green">
+        <div className="flex-shrink-0 p-3 bg-gradient-to-br from-lime-green/30 to-lime-green/10 rounded-xl text-lime-green glow-green pulse-glow">
           {getIcon(title)}
         </div>
-        <h3 className="ml-4 text-lg font-semibold text-white">{title}</h3>
+        <h3 className="ml-4 text-lg font-semibold text-white group-hover:text-lime-green transition-colors duration-300">{title}</h3>
       </div>
       <p className="text-white leading-relaxed">{blurb}</p>
     </div>

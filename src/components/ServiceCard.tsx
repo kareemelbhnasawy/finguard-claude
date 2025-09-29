@@ -49,9 +49,9 @@ const ServiceCard = ({ id, title, bullets }: ServiceCardProps) => {
   };
 
   return (
-    <div className="bg-slate-blue-gray p-6 rounded-lg shadow-sm border border-steel-blue hover:shadow-md transition-shadow duration-200 h-full">
+    <div className="bg-deep-navy p-6 rounded-lg shadow-sm border border-steel-blue hover:shadow-md transition-shadow duration-200 h-full">
       <div className="flex items-center mb-4">
-        <div className="flex-shrink-0 p-3 bg-lime-green/10 rounded-lg text-lime-green">
+        <div className="flex-shrink-0 p-3 bg-lime-green/20 rounded-lg text-lime-green">
           {getIcon(id)}
         </div>
         <h3 className="ml-4 text-lg font-semibold text-white">{title}</h3>
@@ -59,7 +59,7 @@ const ServiceCard = ({ id, title, bullets }: ServiceCardProps) => {
       <ul className="space-y-2 mb-6 flex-grow">
         {bullets.slice(0, 3).map((bullet, index) => (
           <li key={index} className="flex items-start">
-            <svg className="h-5 w-5 text-lime-green mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <svg className="h-5 w-5 text-baby-blue mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
             <span className="text-white text-sm">{bullet}</span>

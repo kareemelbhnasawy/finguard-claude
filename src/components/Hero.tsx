@@ -3,8 +3,20 @@ import { company } from '../data/company';
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-br from-deep-navy to-deep-navy/90 text-white">
-      <div className="section-padding container-max">
+    <section className="relative bg-gradient-to-br from-deep-navy to-deep-navy/90 text-white overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 bg-gradient-to-r from-deep-navy/95 to-deep-navy/80">
+        <img
+          src="/api/placeholder/1920/1080"
+          alt="Professional financial consulting office environment"
+          className="w-full h-full object-cover opacity-20"
+        />
+      </div>
+      {/* Decorative Elements */}
+      <div className="absolute top-20 right-10 w-32 h-32 bg-lime-green/10 rounded-full blur-xl"></div>
+      <div className="absolute bottom-20 left-10 w-24 h-24 bg-baby-blue/10 rounded-full blur-xl"></div>
+      <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-lime-green/5 rounded-full blur-lg"></div>
+      <div className="relative section-padding container-max">
         <div className="py-24 lg:py-32">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-balance text-white">

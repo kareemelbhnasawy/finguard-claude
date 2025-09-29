@@ -28,7 +28,7 @@ const Footer = () => {
                   <span className="font-medium">Phone:</span>{' '}
                   <a
                     href={`tel:${company.contact.phone}`}
-                    className="hover:text-white transition-colors focus-visible:focus-visible"
+                    className="hover:text-baby-blue transition-colors focus-visible:focus-visible"
                   >
                     {company.contact.phone}
                   </a>
@@ -37,7 +37,7 @@ const Footer = () => {
                   <span className="font-medium">Email:</span>{' '}
                   <a
                     href={`mailto:${company.contact.email}`}
-                    className="hover:text-white transition-colors focus-visible:focus-visible"
+                    className="hover:text-baby-blue transition-colors focus-visible:focus-visible"
                   >
                     {company.contact.email}
                   </a>
@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-slate-blue-gray py-6">
+        <div className="border-t border-baby-blue/30 py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
             <p className="text-white text-sm">
               © {currentYear} {company.brand}. All rights reserved.

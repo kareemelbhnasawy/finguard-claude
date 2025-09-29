@@ -29,19 +29,27 @@ const SectorList = ({ title, companies }: SectorListProps) => {
 
   return (
     <section className="mb-8">
-      <h3 className="text-xl font-semibold text-navy mb-4 border-b border-gray-200 pb-2">
+      <h3 className="text-xl font-semibold text-navy mb-4 border-b border-baby-blue pb-2">
         {formatSectorTitle(title)}
       </h3>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
         {companies.map((company, index) => (
-          <li
+          <div
             key={index}
-            className="bg-gray-50 rounded-lg px-4 py-3 text-gray-700 hover:bg-gray-100 transition-colors duration-200"
+            className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 flex items-center justify-center min-h-[120px]"
           >
-            <span className="text-sm font-medium">{company}</span>
-          </li>
+            <div className="text-center">
+              {/* Placeholder for company logo */}
+              <div className="w-16 h-16 bg-deep-navy rounded-lg flex items-center justify-center mb-3 mx-auto">
+                <span className="text-lime-green font-bold text-lg">
+                  {company.split(' ').map(word => word[0]).join('').slice(0, 3)}
+                </span>
+              </div>
+              <span className="text-sm font-medium text-gray-700 block">{company}</span>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </section>
   );
 };

@@ -26,6 +26,7 @@ export default {
 
         // Accents & Interactive Elements
         'lime-green': '#72A343',
+        'baby-blue': '#87CEEB',
 
         // Legacy colors (keeping for compatibility)
         'navy': '#15354A', // Updated to match deep-navy

@@ -12,11 +12,17 @@ const Home = () => {
       <Hero />
 
       {/* Values Section */}
-      <section className="py-16 bg-steel-blue">
-        <div className="section-padding container-max">
+      <section className="py-16 bg-light-gray relative">
+        {/* Decorative Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-20 w-32 h-32 bg-lime-green rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-28 h-28 bg-baby-blue rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-navy rounded-full blur-3xl"></div>
+        </div>
+        <div className="section-padding container-max relative">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Our Core Values</h2>
-            <p className="text-lg text-white max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-navy mb-4">Our Core Values</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               The principles that guide everything we do
             </p>
           </div>
@@ -29,11 +35,11 @@ const Home = () => {
       </section>
 
       {/* Services Preview */}
-      <section className="py-16 bg-deep-navy">
+      <section className="py-16 bg-white">
         <div className="section-padding container-max">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Our Services</h2>
-            <p className="text-lg text-white max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-navy mb-4">Our Services</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               {company.servicesIntro}
             </p>
           </div>
@@ -51,20 +57,20 @@ const Home = () => {
       </section>
 
       {/* Social Proof */}
-      <section className="py-16 bg-steel-blue text-white">
+      <section className="py-16 bg-light-gray text-gray-600">
         <div className="section-padding container-max">
           <div className="text-center">
-            <h2 className="text-3xl font-bold mb-6 text-white">Trusted by Industry Leaders</h2>
-            <p className="text-xl text-white mb-8">
+            <h2 className="text-3xl font-bold mb-6 text-navy">Trusted by Industry Leaders</h2>
+            <p className="text-xl text-gray-600 mb-8">
               Serving 300+ companies across multiple sectors
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <span className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">Banking</span>
-              <span className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">Construction</span>
-              <span className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">Manufacturing</span>
-              <span className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">Tourism</span>
-              <span className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">Education</span>
-              <span className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">Agriculture</span>
+              <span className="bg-navy text-white px-4 py-2 rounded-full">Banking</span>
+              <span className="bg-navy text-white px-4 py-2 rounded-full">Construction</span>
+              <span className="bg-navy text-white px-4 py-2 rounded-full">Manufacturing</span>
+              <span className="bg-navy text-white px-4 py-2 rounded-full">Tourism</span>
+              <span className="bg-navy text-white px-4 py-2 rounded-full">Education</span>
+              <span className="bg-navy text-white px-4 py-2 rounded-full">Agriculture</span>
             </div>
           </div>
         </div>

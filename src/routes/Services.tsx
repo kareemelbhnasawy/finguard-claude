@@ -7,11 +7,11 @@ const Services = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-16 bg-deep-navy">
+      <section className="py-16 bg-white">
         <div className="section-padding container-max">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl font-bold text-light-gray mb-6">Our Services</h1>
-            <p className="text-xl text-white leading-relaxed">
+            <h1 className="text-4xl font-bold text-navy mb-6">Our Services</h1>
+            <p className="text-xl text-gray-600 leading-relaxed">
               {company.servicesIntro}
             </p>
           </div>
@@ -19,14 +19,14 @@ const Services = () => {
       </section>
 
       {/* Quick Navigation */}
-      <section className="py-8 bg-steel-blue sticky top-16 z-40 border-b border-slate-blue-gray">
+      <section className="py-8 bg-light-gray sticky top-16 z-40 border-b border-baby-blue">
         <div className="section-padding container-max">
           <nav className="flex flex-wrap justify-center gap-4" aria-label="Services navigation">
             {company.services.map((service) => (
               <a
                 key={service.id}
                 href={`#${service.id}`}
-                className="px-4 py-2 text-sm font-medium text-white hover:bg-lime-green hover:text-white rounded-lg transition-colors focus-visible:focus-visible"
+                className="px-4 py-2 text-sm font-medium text-navy hover:bg-lime-green hover:text-white rounded-lg transition-colors focus-visible:focus-visible"
               >
                 {service.title}
               </a>
@@ -36,14 +36,19 @@ const Services = () => {
       </section>
 
       {/* Services Sections */}
-      <div className="py-16 bg-deep-navy">
-        <div className="section-padding container-max">
+      <div className="py-16 bg-white relative">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-10 right-10 w-24 h-24 bg-lime-green rounded-full blur-2xl"></div>
+          <div className="absolute bottom-10 left-10 w-20 h-20 bg-baby-blue rounded-full blur-2xl"></div>
+        </div>
+        <div className="section-padding container-max relative">
           <div className="space-y-16">
             {company.services.map((service) => (
               <section key={service.id} id={service.id} className="scroll-mt-32">
-                <div className="bg-steel-blue rounded-lg shadow-sm border border-slate-blue-gray p-8">
+                <div className="bg-deep-navy rounded-lg shadow-sm border border-slate-blue-gray p-8">
                   <div className="flex items-center mb-6">
-                    <div className="p-3 bg-lime-green/10 rounded-lg">
+                    <div className="p-3 bg-lime-green/20 rounded-lg">
                       {getServiceIcon(service.id)}
                     </div>
                     <h2 className="ml-4 text-3xl font-bold text-white">{service.title}</h2>
@@ -55,7 +60,7 @@ const Services = () => {
                       <ul className="space-y-3">
                         {service.bullets.map((bullet, bulletIndex) => (
                           <li key={bulletIndex} className="flex items-start">
-                            <svg className="h-5 w-5 text-lime-green mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                            <svg className="h-5 w-5 text-baby-blue mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                             </svg>
                             <span className="text-white">{bullet}</span>
@@ -64,7 +69,7 @@ const Services = () => {
                       </ul>
                     </div>
 
-                    <div className="bg-slate-blue-gray rounded-lg p-6">
+                    <div className="bg-steel-blue rounded-lg p-6 border border-baby-blue/20">
                       <h3 className="text-lg font-semibold text-white mb-4">Why Choose Our {service.title}?</h3>
                       <p className="text-white leading-relaxed">
                         {getServiceDescription(service.id)}

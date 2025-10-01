@@ -45,7 +45,7 @@ const Services = () => {
         <div className="section-padding container-max relative">
           <div className="space-y-16">
             {company.services.map((service) => (
-              <section key={service.id} id={service.id} className="scroll-mt-32">
+              <section key={service.id} id={service.id} className="scroll-mt-48">
                 <div className="bg-deep-navy rounded-lg shadow-sm border border-slate-blue-gray p-8">
                   <div className="flex items-center mb-6">
                     <div className="p-3 bg-lime-green/20 rounded-lg">

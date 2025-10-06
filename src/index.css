@@ -164,41 +164,11 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-gradient-to-r from-lime-green to-lime-green/80 hover:from-lime-green hover:to-lime-green/90 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-lime-green focus:ring-offset-2 shadow-lg hover:shadow-2xl hover:shadow-lime-green/25 hover:transform hover:scale-105 relative overflow-hidden;
-  }
-
-  .btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-  }
-
-  .btn-primary:hover::before {
-    left: 100%;
+    @apply bg-lime-green hover:bg-lime-green/90 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-lime-green focus:ring-offset-2;
   }
 
   .btn-secondary {
-    @apply bg-gradient-to-r from-light-gray to-white border-2 border-steel-blue text-steel-blue hover:bg-gradient-to-r hover:from-steel-blue hover:to-steel-blue hover:text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-steel-blue focus:ring-offset-2 shadow-md hover:shadow-xl hover:shadow-steel-blue/20 hover:transform hover:scale-105 relative overflow-hidden;
-  }
-
-  .btn-secondary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-  }
-
-  .btn-secondary:hover::before {
-    left: 100%;
+    @apply bg-light-gray border-2 border-steel-blue text-steel-blue hover:bg-steel-blue hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-steel-blue focus:ring-offset-2;
   }
 
   .section-padding {
@@ -217,75 +187,5 @@
 @layer utilities {
   .focus-visible:focus-visible {
     @apply outline-2 outline-lime-green outline-offset-2;
-  }
-
-  .glass-effect {
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  .glow-green {
-    box-shadow: 0 0 20px rgba(114, 163, 67, 0.3), 0 0 40px rgba(114, 163, 67, 0.1);
-  }
-
-  .glow-blue {
-    box-shadow: 0 0 20px rgba(135, 206, 235, 0.3), 0 0 40px rgba(135, 206, 235, 0.1);
-  }
-
-  .glow-navy {
-    box-shadow: 0 0 20px rgba(21, 53, 74, 0.4), 0 0 40px rgba(21, 53, 74, 0.2);
-  }
-
-  .shimmer {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .shimmer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
-    animation: shimmer 2s infinite;
-  }
-
-  @keyframes shimmer {
-    0% { left: -100%; }
-    100% { left: 100%; }
-  }
-
-  .gradient-border {
-    position: relative;
-    background: linear-gradient(45deg, #72A343, #87CEEB, #15354A);
-    background-size: 300% 300%;
-    animation: gradient-shift 3s ease infinite;
-  }
-
-  @keyframes gradient-shift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-
-  .float-animation {
-    animation: float 3s ease-in-out infinite;
-  }
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-  }
-
-  .pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite alternate;
-  }
-
-  @keyframes pulse-glow {
-    from { box-shadow: 0 0 20px rgba(114, 163, 67, 0.3); }
-    to { box-shadow: 0 0 30px rgba(114, 163, 67, 0.6), 0 0 50px rgba(114, 163, 67, 0.2); }
   }
 }

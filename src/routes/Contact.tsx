@@ -134,10 +134,10 @@ const Contact = () => {
             {company.services.slice(0, 6).map((service) => (
               <div
                 key={service.id}
-                className="bg-slate-blue-gray p-6 rounded-lg shadow-sm border border-steel-blue text-center hover:shadow-md transition-shadow duration-200"
+                className="bg-deep-navy p-8 rounded-lg shadow-sm border border-gray-100 text-center"
               >
                 <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
-                <p className="text-white text-sm mb-4">
+                <p className="text-gray-300 text-sm mb-4">
                   {service.bullets.slice(0, 2).join(', ')}
                   {service.bullets.length > 2 && '...'}
                 </p>
@@ -161,23 +161,23 @@ const Contact = () => {
         <div className="section-padding container-max">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-2xl font-bold text-navy mb-6">Business Hours</h2>
-            <div className="bg-deep-navy p-8 rounded-lg shadow-sm border border-steel-blue">
+            <div className="bg-deep-navy p-8 rounded-lg shadow-sm border border-gray-100">
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
-                  <span className="font-medium text-baby-blue">Monday - Thursday</span>
-                  <span className="text-white">9:00 AM - 6:00 PM</span>
+                  <span className="font-medium text-white">Monday - Thursday</span>
+                  <span className="text-gray-300">9:00 AM - 6:00 PM</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="font-medium text-baby-blue">Friday</span>
-                  <span className="text-white">9:00 AM - 5:00 PM</span>
+                  <span className="font-medium text-white">Friday</span>
+                  <span className="text-gray-300">9:00 AM - 5:00 PM</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="font-medium text-baby-blue">Saturday - Sunday</span>
-                  <span className="text-white">Closed</span>
+                  <span className="font-medium text-white">Saturday - Sunday</span>
+                  <span className="text-gray-300">Closed</span>
                 </div>
               </div>
-              <div className="mt-6 pt-6 border-t border-steel-blue">
-                <p className="text-sm text-baby-blue">
+              <div className="mt-6 pt-6 border-t border-gray-100">
+                <p className="text-sm text-gray-300">
                   Emergency consultations available by appointment outside regular hours.
                 </p>
               </div>

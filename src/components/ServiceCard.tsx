@@ -49,24 +49,24 @@ const ServiceCard = ({ id, title, bullets }: ServiceCardProps) => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-deep-navy via-slate-blue-gray to-deep-navy p-6 rounded-xl shadow-xl border border-lime-green/20 hover:shadow-2xl hover:glow-navy transition-all duration-500 transform hover:scale-105 shimmer group h-full">
+    <div className="bg-deep-navy p-8 rounded-lg shadow-sm border border-gray-100 h-full">
       <div className="flex items-center mb-4">
-        <div className="flex-shrink-0 p-3 bg-gradient-to-br from-lime-green/30 to-lime-green/10 rounded-xl text-lime-green glow-green pulse-glow">
+        <div className="flex-shrink-0 p-3 bg-lime-green/20 rounded-lg text-lime-green">
           {getIcon(id)}
         </div>
-        <h3 className="ml-4 text-lg font-semibold text-white group-hover:text-lime-green transition-colors duration-300">{title}</h3>
+        <h3 className="ml-4 text-lg font-semibold text-white">{title}</h3>
       </div>
       <ul className="space-y-2 mb-6 flex-grow">
         {bullets.slice(0, 3).map((bullet, index) => (
           <li key={index} className="flex items-start">
-            <svg className="h-5 w-5 text-baby-blue mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <svg className="h-5 w-5 text-lime-green mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
-            <span className="text-white text-sm">{bullet}</span>
+            <span className="text-gray-300 text-sm">{bullet}</span>
           </li>
         ))}
         {bullets.length > 3 && (
-          <li className="text-white text-sm italic">
+          <li className="text-gray-300 text-sm italic">
             +{bullets.length - 3} more services
           </li>
         )}

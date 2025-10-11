@@ -35,7 +35,7 @@ const Header = () => {
               <img
                 src="/finguard-logo.png "
                 alt="Finguard Logo"
-                className="h-24 w-auto"
+                className="h-12 w-auto"
               />
               {/* <span className="text-2xl font-bold text-white">
                 {company.brand}

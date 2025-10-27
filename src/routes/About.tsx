@@ -1,27 +1,74 @@
 import { useSEO, seoData } from '../lib/seo';
 import { company } from '../data/company';
 import ValueCard from '../components/ValueCard';
+import { images } from '../data/images';
 
 const About = () => {
   useSEO(seoData.about);
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="py-16 bg-white">
-        <div className="section-padding container-max">
+      {/* Hero Section with Image */}
+      <section className="relative py-24 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={images.about.office}
+            alt="Professional office environment"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-deep-navy/80 via-deep-navy/70 to-deep-navy/80"></div>
+        </div>
+
+        <div className="section-padding container-max relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl font-bold text-navy mb-6">About Finguard</h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">About Finguard</h1>
+            <p className="text-xl text-gray-200 leading-relaxed">
               {company.about}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Mission and Vision */}
-      <section className="py-16 bg-light-gray">
+      {/* Image + Text Section */}
+      <section className="py-12 sm:py-16 bg-white">
         <div className="section-padding container-max">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div className="relative h-64 sm:h-80 lg:h-full lg:min-h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src={images.about.teamMeeting}
+                alt="Professional team meeting"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            <div className="order-first lg:order-none">
+              <h2 className="text-2xl sm:text-3xl font-bold text-navy mb-4 sm:mb-6">Trusted Partners in Your Success</h2>
+              <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-4 sm:mb-6">
+                With decades of combined experience, we've built lasting relationships with businesses across
+                Egypt and Saudi Arabia. Our team of certified professionals brings deep expertise in audit,
+                tax, and advisory services.
+              </p>
+              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+                We pride ourselves on delivering personalized service that goes beyond compliance—we're here
+                to help you achieve your strategic goals and navigate the complexities of modern business.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission and Vision */}
+      <section className="py-16 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&q=80"
+            alt="Business vision"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/98 via-light-gray/97 to-white/98"></div>
+        </div>
+        <div className="section-padding container-max relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="bg-deep-navy p-8 rounded-lg shadow-sm border border-gray-100">
               <div className="flex items-center mb-6">
@@ -56,8 +103,17 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-16 bg-white">
-        <div className="section-padding container-max">
+      <section className="py-16 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80"
+            alt="Professional workspace"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/98 via-white/97 to-white/98"></div>
+        </div>
+        <div className="section-padding container-max relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-navy mb-4">Our Core Values</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -68,6 +124,59 @@ const About = () => {
             {company.values.map((value, index) => (
               <ValueCard key={index} title={value.title} blurb={value.blurb} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Image Grid Section */}
+      <section className="py-12 sm:py-16 bg-light-gray">
+        <div className="section-padding container-max">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-navy mb-3 sm:mb-4">Our Expertise in Action</h2>
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
+              From boardrooms to financial reports, we deliver excellence across every aspect of your business
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            <div className="relative h-48 sm:h-56 md:h-64 rounded-xl overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80"
+                alt="Business consultation"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/90 via-deep-navy/50 to-transparent flex items-end p-6">
+                <div>
+                  <h3 className="text-white text-xl font-bold mb-2">Strategic Advisory</h3>
+                  <p className="text-gray-200 text-sm">Expert guidance for your business decisions</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative h-64 rounded-xl overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&q=80"
+                alt="Financial analysis"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/90 via-deep-navy/50 to-transparent flex items-end p-6">
+                <div>
+                  <h3 className="text-white text-xl font-bold mb-2">Financial Reporting</h3>
+                  <p className="text-gray-200 text-sm">Accurate, compliant financial documentation</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative h-64 rounded-xl overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
+                alt="Team collaboration"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/90 via-deep-navy/50 to-transparent flex items-end p-6">
+                <div>
+                  <h3 className="text-white text-xl font-bold mb-2">Collaborative Approach</h3>
+                  <p className="text-gray-200 text-sm">Working together for your success</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

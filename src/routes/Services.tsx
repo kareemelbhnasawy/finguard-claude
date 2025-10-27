@@ -1,17 +1,27 @@
 import { useSEO, seoData } from '../lib/seo';
 import { company } from '../data/company';
+import { images } from '../data/images';
 
 const Services = () => {
   useSEO(seoData.services);
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="py-16 bg-white">
-        <div className="section-padding container-max">
+      {/* Hero Section with Image */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={images.services.advisory}
+            alt="Professional business consultation"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-deep-navy/75 via-slate-blue-gray/70 to-deep-navy/75"></div>
+        </div>
+
+        <div className="section-padding container-max relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl font-bold text-navy mb-6">Our Services</h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Services</h1>
+            <p className="text-xl text-gray-200 leading-relaxed">
               {company.servicesIntro}
             </p>
           </div>
@@ -36,13 +46,17 @@ const Services = () => {
       </section>
 
       {/* Services Sections */}
-      <div className="py-16 bg-white relative">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-10 right-10 w-24 h-24 bg-lime-green rounded-full blur-2xl"></div>
-          <div className="absolute bottom-10 left-10 w-20 h-20 bg-baby-blue rounded-full blur-2xl"></div>
+      <div className="py-16 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80"
+            alt="Professional workspace"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/98 via-white/97 to-white/98"></div>
         </div>
-        <div className="section-padding container-max relative">
+        <div className="section-padding container-max relative z-10">
           <div className="space-y-16">
             {company.services.map((service) => (
               <section key={service.id} id={service.id} className="scroll-mt-48">

@@ -7,16 +7,24 @@ const Team = () => {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-deep-navy via-slate-blue-gray to-deep-navy relative overflow-hidden">
+      {/* Hero Section with Image */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1920&q=80"
+            alt="Professional team collaboration"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-deep-navy/75 via-slate-blue-gray/70 to-deep-navy/75"></div>
+        </div>
         {/* Enhanced Decorative Elements */}
         <div className="absolute top-10 right-10 w-20 h-20 bg-lime-green/20 rounded-full blur-xl float-animation glow-green"></div>
         <div className="absolute bottom-10 left-10 w-16 h-16 bg-baby-blue/20 rounded-full blur-lg pulse-glow" style={{animationDelay: '1s'}}></div>
         <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-lime-green/15 rounded-full blur-md float-animation" style={{animationDelay: '0.5s'}}></div>
-        <div className="section-padding container-max">
+        <div className="section-padding container-max relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl font-bold text-white mb-6 drop-shadow-2xl">Our Team</h1>
-            <p className="text-xl text-gray-300 leading-relaxed">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-2xl">Our Team</h1>
+            <p className="text-xl text-gray-200 leading-relaxed">
               Meet our experienced professionals who bring decades of expertise in audit, tax, and advisory services.
               Our team combines deep technical knowledge with a client-focused approach to deliver exceptional results.
             </p>
@@ -25,8 +33,17 @@ const Team = () => {
       </section>
 
       {/* Team Members */}
-      <section className="py-16 bg-white relative">
-        <div className="section-padding container-max">
+      <section className="py-16 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80"
+            alt="Professional workspace"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/98 via-white/97 to-white/98"></div>
+        </div>
+        <div className="section-padding container-max relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {company.team.map((member, index) => (
               <TeamCard
@@ -41,8 +58,17 @@ const Team = () => {
       </section>
 
       {/* Team Values */}
-      <section className="py-16 bg-light-gray relative">
-        <div className="section-padding container-max">
+      <section className="py-16 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=1920&q=80"
+            alt="Business excellence"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/98 via-light-gray/97 to-white/98"></div>
+        </div>
+        <div className="section-padding container-max relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-navy mb-8">What Drives Our Team</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -1,18 +1,29 @@
 import { useSEO, seoData } from '../lib/seo';
 import { company } from '../data/company';
 import SectorList from '../components/SectorList';
+import AnimatedCounter from '../components/AnimatedCounter';
+import { images } from '../data/images';
 
 const Clients = () => {
   useSEO(seoData.clients);
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="py-16 bg-white">
-        <div className="section-padding container-max">
+      {/* Hero Section with Image */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={images.about.handshake}
+            alt="Professional business partnership"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-deep-navy/80 via-slate-blue-gray/75 to-deep-navy/80"></div>
+        </div>
+
+        <div className="section-padding container-max relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl font-bold text-navy mb-6">Our Clients</h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Clients</h1>
+            <p className="text-xl text-gray-200 leading-relaxed">
               {company.clientsIntro}
             </p>
           </div>
@@ -20,30 +31,110 @@ const Clients = () => {
       </section>
 
       {/* Stats */}
-      <section className="py-16 bg-light-gray">
-        <div className="section-padding container-max">
+      <section className="py-16 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=80"
+            alt="Financial analysis"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/98 via-light-gray/97 to-white/98"></div>
+        </div>
+        <div className="section-padding container-max relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="bg-deep-navy p-8 rounded-lg shadow-sm border border-gray-100">
-              <div className="text-4xl font-bold text-lime-green mb-2">300+</div>
+            <div className="bg-deep-navy p-8 rounded-lg shadow-sm border border-gray-100 hover-lift hover-glow-green transition-smooth">
+              <div className="text-4xl font-bold text-lime-green mb-2">
+                <AnimatedCounter end={300} suffix="+" duration={2500} />
+              </div>
               <div className="text-lg text-white">Companies Served</div>
             </div>
-            <div className="bg-deep-navy p-8 rounded-lg shadow-sm border border-gray-100">
-              <div className="text-4xl font-bold text-lime-green mb-2">8</div>
+            <div className="bg-deep-navy p-8 rounded-lg shadow-sm border border-gray-100 hover-lift hover-glow-blue transition-smooth">
+              <div className="text-4xl font-bold text-lime-green mb-2">
+                <AnimatedCounter end={8} duration={2000} />
+              </div>
               <div className="text-lg text-white">Industry Sectors</div>
             </div>
-            <div className="bg-deep-navy p-8 rounded-lg shadow-sm border border-gray-100">
-              <div className="text-4xl font-bold text-lime-green mb-2">2</div>
+            <div className="bg-deep-navy p-8 rounded-lg shadow-sm border border-gray-100 hover-lift hover-glow-green transition-smooth">
+              <div className="text-4xl font-bold text-lime-green mb-2">
+                <AnimatedCounter end={2} duration={1500} />
+              </div>
               <div className="text-lg text-white">Countries</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Client Sectors */}
-      <section className="py-16 bg-white">
+      {/* Industry Showcase with Images */}
+      <section className="py-12 sm:py-16 bg-white">
         <div className="section-padding container-max">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-navy mb-3 sm:mb-4">Sectors We Serve</h2>
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto mb-8 sm:mb-12 px-4">
+              Trusted by leading organizations across diverse industries
+            </p>
+          </div>
+
+          {/* Industry Image Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-12 sm:mb-16">
+            <div className="relative h-32 sm:h-40 md:h-48 rounded-lg overflow-hidden group">
+              <img
+                src={images.clients.banking}
+                alt="Banking & Finance"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/95 via-deep-navy/60 to-transparent flex items-end p-3 sm:p-4">
+                <h3 className="text-white font-bold text-sm sm:text-base md:text-lg">Banking & Finance</h3>
+              </div>
+            </div>
+            <div className="relative h-32 sm:h-40 md:h-48 rounded-lg overflow-hidden group">
+              <img
+                src={images.clients.construction}
+                alt="Construction & Housing"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/95 via-deep-navy/60 to-transparent flex items-end p-3 sm:p-4">
+                <h3 className="text-white font-bold text-sm sm:text-base md:text-lg">Construction</h3>
+              </div>
+            </div>
+            <div className="relative h-32 sm:h-40 md:h-48 rounded-lg overflow-hidden group">
+              <img
+                src={images.clients.manufacturing}
+                alt="Manufacturing & Industrial"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/95 via-deep-navy/60 to-transparent flex items-end p-3 sm:p-4">
+                <h3 className="text-white font-bold text-sm sm:text-base md:text-lg">Manufacturing</h3>
+              </div>
+            </div>
+            <div className="relative h-32 sm:h-40 md:h-48 rounded-lg overflow-hidden group">
+              <img
+                src={images.clients.hospitality}
+                alt="Tourism & Hospitality"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/95 via-deep-navy/60 to-transparent flex items-end p-3 sm:p-4">
+                <h3 className="text-white font-bold text-sm sm:text-base md:text-lg">Hospitality</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Client Sectors */}
+      <section className="py-16 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80"
+            alt="Modern business district"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/98 via-light-gray/97 to-white/98"></div>
+        </div>
+        <div className="section-padding container-max relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-navy mb-4">Industries We Serve</h2>
+            <h2 className="text-3xl font-bold text-navy mb-4">Our Clients</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Our diverse client portfolio spans multiple sectors, from established multinational corporations
               to fast-growing enterprises across {company.geography}.
@@ -83,8 +174,17 @@ const Clients = () => {
       </section>
 
       {/* Why Clients Choose Us */}
-      <section className="py-16 bg-white">
-        <div className="section-padding container-max">
+      <section className="py-16 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&q=80"
+            alt="Business collaboration"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/98 via-white/97 to-white/98"></div>
+        </div>
+        <div className="section-padding container-max relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-navy text-center mb-12">
               Why Clients Choose Finguard

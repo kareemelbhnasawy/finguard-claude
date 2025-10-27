@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 interface ServiceCardProps {
   id: string;
@@ -7,6 +8,7 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = ({ id, title, bullets }: ServiceCardProps) => {
+  const { ref, isVisible } = useScrollReveal({ threshold: 0.2 });
   const getIcon = (id: string) => {
     switch (id) {
       case 'audit-assurance':
@@ -49,9 +51,14 @@ const ServiceCard = ({ id, title, bullets }: ServiceCardProps) => {
   };
 
   return (
-    <div className="bg-deep-navy p-8 rounded-lg shadow-sm border border-gray-100 h-full">
+    <div
+      ref={ref}
+      className={`bg-deep-navy p-8 rounded-lg shadow-sm border border-gray-100 h-full hover-lift hover-glow-green transition-smooth opacity-0 ${
+        isVisible ? 'animate-slide-up' : ''
+      }`}
+    >
       <div className="flex items-center mb-4">
-        <div className="flex-shrink-0 p-3 bg-lime-green/20 rounded-lg text-lime-green">
+        <div className="flex-shrink-0 p-3 bg-lime-green/20 rounded-lg text-lime-green transition-transform duration-300 hover:scale-110 hover:rotate-3">
           {getIcon(id)}
         </div>
         <h3 className="ml-4 text-lg font-semibold text-white">{title}</h3>

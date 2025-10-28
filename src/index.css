@@ -205,6 +205,27 @@
   .hover-lift-professional {
     @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl;
   }
+
+  /* Modern gradient button */
+  .btn-gradient {
+    @apply relative inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-white;
+    @apply bg-gradient-to-r from-lime-green to-green-500 rounded-2xl;
+    @apply shadow-2xl shadow-lime-green/30 hover:shadow-lime-green/50;
+    @apply transition-all duration-300 hover:scale-105 hover:-translate-y-1;
+    background-size: 200% auto;
+  }
+
+  .btn-gradient:hover {
+    animation: gradient-shift 2s ease infinite;
+  }
+
+  /* Modern outline button */
+  .btn-modern-outline {
+    @apply inline-flex items-center justify-center px-10 py-5 text-lg font-bold text-navy;
+    @apply bg-white/80 backdrop-blur-sm border-2 border-slate-300 hover:border-lime-green;
+    @apply rounded-2xl shadow-xl hover:shadow-2xl;
+    @apply transition-all duration-300 hover:scale-105 hover:-translate-y-1;
+  }
 }
 
 @layer utilities {
@@ -235,6 +256,35 @@
   }
   75% {
     transform: translate(-10px, -5px);
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
   }
 }
 

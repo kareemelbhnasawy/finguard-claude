@@ -29,19 +29,21 @@ const Home = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-24 md:py-32 relative overflow-hidden bg-gradient-to-br from-slate-100 via-slate-50 to-baby-blue/5">
+      <section className="py-32 md:py-40 lg:py-48 relative overflow-hidden bg-gradient-to-br from-white via-slate-50 to-white">
         {/* Decorative Elements */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-lime-green/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-baby-blue/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-lime-green/8 rounded-full blur-3xl animate-float-slow"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-baby-blue/10 rounded-full blur-3xl animate-float-slow" style={{animationDelay: '1.5s'}}></div>
 
         <div className="section-padding container-max relative z-10">
-          <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-lime-green/10 border border-lime-green/20 text-xs font-semibold tracking-[0.2em] uppercase text-lime-green mb-6">
-              <span className="w-2 h-2 bg-lime-green rounded-full"></span>
+          <div className="text-center mb-20 md:mb-24">
+            <span className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-lime-green/15 backdrop-blur-sm border border-lime-green/30 text-xs font-bold tracking-wider uppercase text-lime-green mb-8 shadow-lg">
+              <span className="w-2.5 h-2.5 bg-lime-green rounded-full animate-pulse"></span>
               Our Foundation
             </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy mb-6 tracking-tight">Our Core Values</h2>
-            <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-navy mb-8 tracking-tight leading-tight">
+              Our Core <span className="bg-gradient-to-r from-lime-green to-green-500 bg-clip-text text-transparent">Values</span>
+            </h2>
+            <p className="text-2xl md:text-3xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-light">
               The principles that guide everything we do
             </p>
           </div>
@@ -108,14 +110,16 @@ const Home = () => {
 
         <div className="section-padding container-max relative z-10">
           {/* Text Container with Background Panel */}
-          <div className="text-center mb-16 max-w-5xl mx-auto">
-            <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl border border-slate-200/50">
-              <span className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-lime-green/15 border border-lime-green/30 text-xs font-semibold tracking-[0.2em] uppercase text-lime-green mb-6">
-                <span className="w-2 h-2 bg-lime-green rounded-full"></span>
+          <div className="text-center mb-20 md:mb-24 max-w-5xl mx-auto">
+            <div className="bg-white/95 backdrop-blur-md rounded-3xl p-10 md:p-14 shadow-2xl border border-slate-200/60">
+              <span className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-lime-green/15 backdrop-blur-sm border border-lime-green/30 text-xs font-bold tracking-wider uppercase text-lime-green mb-8 shadow-lg">
+                <span className="w-2.5 h-2.5 bg-lime-green rounded-full animate-pulse"></span>
                 What We Do
               </span>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy mb-6 tracking-tight">Our Services</h2>
-              <p className="text-xl md:text-2xl text-slate-700 max-w-4xl mx-auto leading-relaxed">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-navy mb-8 tracking-tight leading-tight">
+                Our <span className="bg-gradient-to-r from-lime-green to-green-500 bg-clip-text text-transparent">Services</span>
+              </h2>
+              <p className="text-2xl md:text-3xl text-slate-700 max-w-4xl mx-auto leading-relaxed font-light">
                 {company.servicesIntro}
               </p>
             </div>
@@ -180,13 +184,15 @@ const Home = () => {
         </div>
 
         <div className="section-padding container-max relative z-10">
-          <div className="text-center max-w-5xl mx-auto">
-            <span className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-xs font-semibold tracking-[0.2em] uppercase text-lime-green mb-8">
-              <span className="w-2 h-2 bg-lime-green rounded-full animate-pulse"></span>
+          <div className="text-center max-w-6xl mx-auto">
+            <span className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/15 backdrop-blur-sm border border-white/30 text-xs font-bold tracking-wider uppercase text-lime-green mb-10 shadow-2xl">
+              <span className="w-2.5 h-2.5 bg-lime-green rounded-full animate-pulse"></span>
               Client Success
             </span>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white leading-tight tracking-tight">Trusted by Industry Leaders</h2>
-            <p className="text-xl sm:text-2xl text-white/90 mb-12 font-light leading-relaxed">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold mb-8 text-white leading-tight tracking-tight">
+              Trusted by Industry <span className="bg-gradient-to-r from-lime-green to-green-400 bg-clip-text text-transparent">Leaders</span>
+            </h2>
+            <p className="text-2xl sm:text-3xl md:text-4xl text-white/90 mb-16 font-light leading-relaxed">
               Serving 300+ companies across multiple sectors
             </p>
             <div className="flex flex-wrap justify-center gap-3 text-sm mb-16">

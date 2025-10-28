@@ -53,40 +53,42 @@ const ServiceCard = ({ id, title, bullets }: ServiceCardProps) => {
   return (
     <div
       ref={ref}
-      className={`bg-deep-navy p-8 rounded-lg shadow-sm border border-gray-100 h-full hover-lift hover-glow-green transition-smooth opacity-0 ${
+      className={`group bg-white rounded-2xl shadow-lg hover:shadow-2xl border border-slate-200/80 h-full transition-smooth opacity-0 hover-lift-professional overflow-hidden ${
         isVisible ? 'animate-slide-up' : ''
       }`}
     >
-      <div className="flex items-center mb-4">
-        <div className="flex-shrink-0 p-3 bg-lime-green/20 rounded-lg text-lime-green transition-transform duration-300 hover:scale-110 hover:rotate-3">
-          {getIcon(id)}
+      <div className="p-8 h-full flex flex-col">
+        <div className="flex items-center mb-6">
+          <div className="flex-shrink-0 p-4 bg-gradient-to-br from-lime-green/20 to-lime-green/10 rounded-xl text-lime-green transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
+            {getIcon(id)}
+          </div>
         </div>
-        <h3 className="ml-4 text-lg font-semibold text-white">{title}</h3>
+        <h3 className="text-2xl font-bold text-navy mb-4 group-hover:text-lime-green transition-colors">{title}</h3>
+        <ul className="space-y-3 mb-8 flex-grow">
+          {bullets.slice(0, 3).map((bullet, index) => (
+            <li key={index} className="flex items-start">
+              <svg className="h-5 w-5 text-lime-green mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span className="text-slate-600 text-base leading-relaxed">{bullet}</span>
+            </li>
+          ))}
+          {bullets.length > 3 && (
+            <li className="text-slate-500 text-sm font-medium italic pl-8">
+              +{bullets.length - 3} more services
+            </li>
+          )}
+        </ul>
+        <Link
+          to={`/services#${id}`}
+          className="inline-flex items-center text-lime-green hover:text-lime-green/80 font-semibold text-base transition-all group-hover:translate-x-1 focus-visible:focus-visible"
+        >
+          Learn more
+          <svg className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </Link>
       </div>
-      <ul className="space-y-2 mb-6 flex-grow">
-        {bullets.slice(0, 3).map((bullet, index) => (
-          <li key={index} className="flex items-start">
-            <svg className="h-5 w-5 text-lime-green mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            <span className="text-gray-300 text-sm">{bullet}</span>
-          </li>
-        ))}
-        {bullets.length > 3 && (
-          <li className="text-gray-300 text-sm italic">
-            +{bullets.length - 3} more services
-          </li>
-        )}
-      </ul>
-      <Link
-        to={`/services#${id}`}
-        className="inline-flex items-center text-lime-green hover:text-lime-green/80 font-medium text-sm transition-colors focus-visible:focus-visible"
-      >
-        Learn more
-        <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-        </svg>
-      </Link>
     </div>
   );
 };

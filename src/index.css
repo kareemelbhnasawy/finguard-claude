@@ -164,15 +164,15 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-lime-green hover:bg-lime-green/90 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-lime-green focus:ring-offset-2;
+    @apply bg-lime-green hover:bg-lime-green/90 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-lime-green focus:ring-offset-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5;
   }
 
   .btn-secondary {
-    @apply bg-light-gray border-2 border-steel-blue text-steel-blue hover:bg-steel-blue hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-steel-blue focus:ring-offset-2;
+    @apply bg-transparent border-2 border-white text-white hover:bg-white hover:text-navy px-8 py-4 rounded-lg font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2;
   }
 
   .section-padding {
-    @apply px-4 sm:px-6 lg:px-8;
+    @apply px-6 sm:px-8 lg:px-12;
   }
 
   .container-max {
@@ -182,6 +182,29 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Professional card styles */
+  .card-professional {
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100/50;
+  }
+
+  .card-dark {
+    @apply bg-gradient-to-br from-deep-navy to-slate-blue-gray rounded-2xl shadow-xl border border-white/10;
+  }
+
+  /* Section headers */
+  .section-header {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight tracking-tight;
+  }
+
+  .section-subheader {
+    @apply text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl;
+  }
+
+  /* Professional hover lift */
+  .hover-lift-professional {
+    @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl;
+  }
 }
 
 @layer utilities {
@@ -190,31 +213,20 @@
   }
 }
 
-/* Animations */
-@keyframes float {
+/* Professional Animations */
+@keyframes float-subtle {
   0%, 100% {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes pulse-glow {
-  0%, 100% {
-    opacity: 0.5;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.1);
+    transform: translateY(-10px);
   }
 }
 
 @keyframes slide-up {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -225,7 +237,7 @@
 @keyframes slide-in-left {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(-40px);
   }
   to {
     opacity: 1;
@@ -236,7 +248,7 @@
 @keyframes slide-in-right {
   from {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(40px);
   }
   to {
     opacity: 1;
@@ -256,7 +268,7 @@
 @keyframes scale-in {
   from {
     opacity: 0;
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
   to {
     opacity: 1;
@@ -276,19 +288,7 @@
 }
 
 .float-animation {
-  animation: float 6s ease-in-out infinite;
-}
-
-.pulse-glow {
-  animation: pulse-glow 3s ease-in-out infinite;
-}
-
-.glow-green {
-  box-shadow: 0 0 40px rgba(191, 219, 56, 0.3);
-}
-
-.glow-blue {
-  box-shadow: 0 0 40px rgba(177, 209, 221, 0.3);
+  animation: float-subtle 8s ease-in-out infinite;
 }
 
 .animate-slide-up {
@@ -336,27 +336,23 @@
   animation-delay: 0.5s;
 }
 
-/* Hover effects */
+/* Professional Hover Effects */
 .hover-lift {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .hover-lift:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-.hover-glow-green:hover {
-  box-shadow: 0 0 30px rgba(191, 219, 56, 0.4);
-}
-
-.hover-glow-blue:hover {
-  box-shadow: 0 0 30px rgba(177, 209, 221, 0.4);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.15);
 }
 
 /* Smooth transitions */
 .transition-smooth {
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-colors-smooth {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Card shine effect */

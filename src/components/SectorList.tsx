@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { localLogos } from '../data/logos';
 
 interface SectorListProps {
   title: string;
@@ -11,9 +12,7 @@ const SectorList = ({ title, companies }: SectorListProps) => {
 
   const LogoOrPlaceholder = ({ companyName }: { companyName: string }) => {
     const [failed, setFailed] = useState(false);
-
-    // Generate logo path from company name
-    const logoPath = `/logos/${companyName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}.svg`;
+    const logoPath = localLogos[companyName];
 
     if (failed) {
       return (
@@ -25,7 +24,7 @@ const SectorList = ({ title, companies }: SectorListProps) => {
       );
     }
 
-    return (
+    return logoPath ? (
       <div className="w-20 h-20 bg-white/95 rounded-lg flex items-center justify-center mb-3 mx-auto p-2 transition-transform duration-300 hover:scale-110 hover:shadow-lg">
         <img
           src={logoPath}
@@ -34,6 +33,12 @@ const SectorList = ({ title, companies }: SectorListProps) => {
           loading="lazy"
           onError={() => setFailed(true)}
         />
+      </div>
+    ) : (
+      <div className="w-20 h-20 bg-lime-green/20 rounded-lg flex items-center justify-center mb-3 mx-auto transition-transform duration-300 hover:scale-110">
+        <span className="text-lime-green font-bold text-lg">
+          {companyName.split(' ').map(word => word[0]).join('').slice(0, 3)}
+        </span>
       </div>
     );
   };

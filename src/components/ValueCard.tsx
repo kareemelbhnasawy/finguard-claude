@@ -51,17 +51,17 @@ const ValueCard = ({ title, blurb }: ValueCardProps) => {
   return (
     <div
       ref={ref}
-      className={`bg-deep-navy p-8 px-2 rounded-lg shadow-sm border border-gray-100 hover-lift hover-glow-blue transition-smooth opacity-0 ${
+      className={`group bg-white rounded-2xl shadow-lg hover:shadow-2xl border border-slate-200/80 transition-smooth opacity-0 hover-lift-professional overflow-hidden ${
         isVisible ? 'animate-scale-in' : ''
       }`}
     >
-      <div className="flex items-center mb-4 px-4">
-        <div className="flex-shrink-0 p-3 bg-lime-green/20 rounded-lg text-lime-green transition-transform duration-300 hover:scale-125 hover:rotate-12">
+      <div className="p-8 text-center h-full flex flex-col items-center">
+        <div className="mb-6 p-4 bg-gradient-to-br from-lime-green/20 to-lime-green/10 rounded-2xl text-lime-green transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
           {getIcon(title)}
         </div>
-        <h3 className="ml-4 text-lg font-semibold justify-center text-center text-white">{title}</h3>
+        <h3 className="text-xl font-bold text-navy mb-4 group-hover:text-lime-green transition-colors">{title}</h3>
+        <p className="text-slate-600 leading-relaxed text-base">{blurb}</p>
       </div>
-      <p className="text-gray-300 leading-relaxed text-center">{blurb}</p>
     </div>
   );
 };

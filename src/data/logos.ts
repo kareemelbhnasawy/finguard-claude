@@ -92,4 +92,16 @@ export const localLogos: Record<string, string> = {
   'Pioneers Holding': '/logos/pioneersholding.png',
   'Pioneers-securities': '/logos/pioneers-securities.png',
   'AMWAL Financial Investments': '/logos/amwal.png',
+  
+  // Newly added logos (previously missing)
+  'Advanced Educational Business Company': '/logos/Advanced_Educational_business.png',
+  'Alrowad Real-Estate Development': '/logos/Alrowad.jpeg',
+  'Delmar for Touristic': '/logos/delmar.jpg',
+  'Egypt Cables Electricity Factory': '/logos/cables.jpg',
+  'FMCG company for trading and distribution': '/logos/fmcg.png',
+  'International Advisor for Securities Underwriting': '/logos/International_Advisor_for_Securities_Underwriting.jpeg',
+  'National Fresh Food Co.': '/logos/national-foods.png',
+  'PNG Advanced Agriculture Solutions': '/logos/png_Advanced_Agriculture_Solutions.png',
+  'SMD': '/logos/smd.jpg',
+  'Zon Gardens': '/logos/zon_gardens.jpeg',
 };

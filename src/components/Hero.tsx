@@ -3,66 +3,145 @@ import { company } from '../data/company';
 
 const Hero = () => {
   return (
-    <section className="relative bg-gradient-to-br from-deep-navy via-slate-blue-gray to-deep-navy text-white overflow-hidden min-h-[90vh] flex items-center">
-      {/* Background Image */}
-      <div className="absolute inset-0 bg-gradient-to-r from-deep-navy/95 to-deep-navy/85">
-        <img
-          src="/hero-1.jpg"
-          alt="Professional financial consulting office environment"
-          className="w-full h-full object-cover opacity-25"
-        />
+    <section className="relative bg-white text-navy overflow-hidden">
+      {/* Modern Grid Pattern Overlay */}
+      <div className="absolute inset-0 opacity-[0.03]">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `linear-gradient(to right, #15354A 1px, transparent 1px),
+                           linear-gradient(to bottom, #15354A 1px, transparent 1px)`,
+          backgroundSize: '80px 80px'
+        }}></div>
       </div>
-      {/* Subtle Decorative Elements */}
-      <div className="absolute top-20 right-10 w-64 h-64 bg-lime-green/10 rounded-full blur-3xl float-animation"></div>
-      <div className="absolute bottom-20 left-10 w-48 h-48 bg-baby-blue/10 rounded-full blur-3xl float-animation" style={{animationDelay: '1.5s'}}></div>
-      <div className="absolute top-1/3 right-1/3 w-32 h-32 bg-lime-green/8 rounded-full blur-2xl float-animation" style={{animationDelay: '3s'}}></div>
 
-      <div className="relative section-padding container-max w-full">
-        <div className="py-20 lg:py-28">
-          <div className="text-center max-w-5xl mx-auto">
-            <div className="mb-8 opacity-0 animate-fade-in">
-              <span className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-medium tracking-wider uppercase">
-                <span className="w-2 h-2 bg-lime-green rounded-full animate-pulse"></span>
-                Professional Audit & Advisory Services
+      {/* Gradient Accents */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-lime-green/10 via-baby-blue/5 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-baby-blue/10 via-lime-green/5 to-transparent rounded-full blur-3xl"></div>
+
+      <div className="relative section-padding container-max">
+        <div className="grid lg:grid-cols-[1.1fr,0.9fr] gap-16 items-center min-h-[calc(100vh-5rem)] py-20 lg:py-16">
+          {/* Left Content */}
+          <div className="space-y-8 lg:space-y-10">
+            {/* Badge */}
+            <div className="opacity-0 animate-fade-in">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-lime-green/10 border border-lime-green/20 text-xs font-bold tracking-[0.15em] uppercase text-lime-green">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Trusted by 300+ Global Enterprises
               </span>
             </div>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold mb-8 text-balance text-white drop-shadow-2xl opacity-0 animate-slide-up animate-delay-100 leading-[1.1]">
-              {company.taglineShort}
-            </h1>
-            <p className="text-xl lg:text-2xl xl:text-3xl mb-12 text-white/90 text-balance max-w-4xl mx-auto leading-relaxed font-light opacity-0 animate-slide-up animate-delay-200">
-              {company.about.split('.')[0]}.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-5 justify-center items-center opacity-0 animate-slide-up animate-delay-300">
+
+            {/* Main Heading */}
+            <div className="space-y-6">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.05] tracking-tight text-navy opacity-0 animate-slide-up animate-delay-100">
+                {company.taglineShort.split(' ').slice(0, 3).join(' ')}
+                <span className="block text-lime-green mt-2">
+                  {company.taglineShort.split(' ').slice(3).join(' ')}
+                </span>
+              </h1>
+              <p className="text-xl sm:text-2xl lg:text-3xl text-slate-600 leading-relaxed font-light max-w-2xl opacity-0 animate-slide-up animate-delay-200">
+                {company.about.split('.')[0]}.
+              </p>
+            </div>
+
+            {/* Key Features */}
+            <div className="grid sm:grid-cols-3 gap-6 opacity-0 animate-fade-in animate-delay-300">
+              <div className="space-y-2">
+                <div className="text-3xl font-bold text-lime-green">300+</div>
+                <div className="text-sm text-slate-600 font-medium">Clients Served</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-3xl font-bold text-lime-green">25+</div>
+                <div className="text-sm text-slate-600 font-medium">Years Experience</div>
+              </div>
+              <div className="space-y-2">
+                <div className="text-3xl font-bold text-lime-green">99%</div>
+                <div className="text-sm text-slate-600 font-medium">Client Satisfaction</div>
+              </div>
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-slide-up animate-delay-400">
               <a
                 href={company.contact.ctas[0].href}
-                className="btn-primary inline-flex items-center group"
+                className="group inline-flex items-center justify-center px-8 py-4 bg-lime-green hover:bg-lime-green/90 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               >
                 {company.contact.ctas[0].label}
-                <svg className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                <svg className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>
               <Link
                 to={company.contact.ctas[1].href}
-                className="btn-secondary inline-flex items-center group"
+                className="group inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-slate-50 text-navy font-semibold rounded-lg border-2 border-slate-300 hover:border-lime-green transition-all duration-300"
               >
                 {company.contact.ctas[1].label}
-                <svg className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <svg className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-in animate-delay-500">
-        <div className="flex flex-col items-center gap-2 text-white/60">
-          <span className="text-sm tracking-wider uppercase">Scroll</span>
-          <svg className="w-6 h-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
+            {/* Trust Badges */}
+            <div className="flex flex-wrap items-center gap-6 pt-4 opacity-0 animate-fade-in animate-delay-500">
+              <div className="flex items-center gap-2 text-slate-600 text-sm font-medium">
+                <svg className="w-5 h-5 text-lime-green" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                ISO Certified
+              </div>
+              <div className="flex items-center gap-2 text-slate-600 text-sm font-medium">
+                <svg className="w-5 h-5 text-lime-green" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Award Winning
+              </div>
+              <div className="flex items-center gap-2 text-slate-600 text-sm font-medium">
+                <svg className="w-5 h-5 text-lime-green" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+                </svg>
+                Expert Team
+              </div>
+            </div>
+          </div>
+
+          {/* Right Visual */}
+          <div className="relative hidden lg:block opacity-0 animate-fade-in animate-delay-300">
+            <div className="relative">
+              {/* Main Image */}
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80">
+                <img
+                  src="/hero-1.jpg"
+                  alt="Professional financial consulting"
+                  className="w-full h-[600px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-navy/20 to-transparent"></div>
+              </div>
+
+              {/* Floating Stats Card */}
+              <div className="absolute -bottom-8 -left-8 bg-white rounded-2xl shadow-2xl p-6 border border-slate-200/80 animate-slide-up animate-delay-500">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-lime-green/20 rounded-xl flex items-center justify-center">
+                    <svg className="w-6 h-6 text-lime-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-navy">$2.5B+</div>
+                    <div className="text-sm text-slate-600 font-medium">Assets Under Advisory</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating Badge */}
+              <div className="absolute -top-6 -right-6 bg-lime-green rounded-2xl shadow-2xl p-6 animate-scale-in animate-delay-600">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white">A+</div>
+                  <div className="text-xs text-white/90 font-semibold mt-1">Rating</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

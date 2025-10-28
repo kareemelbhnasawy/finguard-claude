@@ -29,14 +29,14 @@ const Services = () => {
       </section>
 
       {/* Quick Navigation */}
-      <section className="py-8 bg-light-gray sticky top-16 z-40 border-b border-baby-blue">
+      <section className="py-8 bg-gradient-to-r from-slate-100 to-slate-50 sticky top-16 z-40 border-b border-lime-green/20 backdrop-blur-sm">
         <div className="section-padding container-max">
           <nav className="flex flex-wrap justify-center gap-4" aria-label="Services navigation">
             {company.services.map((service) => (
               <a
                 key={service.id}
                 href={`#${service.id}`}
-                className="px-4 py-2 text-sm font-medium text-navy hover:bg-lime-green hover:text-white rounded-lg transition-colors focus-visible:focus-visible"
+                className="px-4 py-2 text-sm font-medium text-navy hover:bg-lime-green hover:text-white rounded-lg transition-colors focus-visible:focus-visible shadow-sm hover:shadow-md"
               >
                 {service.title}
               </a>
@@ -46,26 +46,31 @@ const Services = () => {
       </section>
 
       {/* Services Sections */}
-      <div className="py-16 relative overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80"
-            alt="Professional workspace"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-white/98 via-white/97 to-white/98"></div>
+      <div className="py-16 relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white">
+        {/* Decorative Elements with Animation - Responsive */}
+        <div className="hidden md:block absolute top-0 right-0 w-[500px] h-[500px] bg-lime-green/5 rounded-full blur-3xl animate-float-slow"></div>
+        <div className="hidden md:block absolute bottom-0 left-0 w-[400px] h-[400px] bg-baby-blue/8 rounded-full blur-3xl animate-float-slow" style={{animationDelay: '2s'}}></div>
+        <div className="hidden lg:block absolute top-1/3 left-1/4 w-[300px] h-[300px] bg-lime-green/3 rounded-full blur-3xl animate-float-slow" style={{animationDelay: '1s'}}></div>
+        <div className="hidden lg:block absolute bottom-1/4 right-1/4 w-[250px] h-[250px] bg-baby-blue/5 rounded-full blur-3xl animate-float-slow" style={{animationDelay: '1.5s'}}></div>
+
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 opacity-[0.015]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `linear-gradient(to right, #15354A 1px, transparent 1px),
+                             linear-gradient(to bottom, #15354A 1px, transparent 1px)`,
+            backgroundSize: '70px 70px'
+          }}></div>
         </div>
         <div className="section-padding container-max relative z-10">
           <div className="space-y-16">
             {company.services.map((service) => (
               <section key={service.id} id={service.id} className="scroll-mt-48">
-                <div className="bg-deep-navy rounded-lg shadow-sm border border-slate-blue-gray p-8">
+                <div className="bg-deep-navy rounded-lg shadow-lg border border-slate-blue-gray p-8 transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 group">
                   <div className="flex items-center mb-6">
-                    <div className="p-3 bg-lime-green/20 rounded-lg">
+                    <div className="p-3 bg-lime-green/20 rounded-lg transition-all duration-300 group-hover:bg-lime-green/30 group-hover:scale-110 group-hover:rotate-6">
                       {getServiceIcon(service.id)}
                     </div>
-                    <h2 className="ml-4 text-3xl font-bold text-white">{service.title}</h2>
+                    <h2 className="ml-4 text-3xl font-bold text-white transition-colors duration-300 group-hover:text-lime-green">{service.title}</h2>
                   </div>
 
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

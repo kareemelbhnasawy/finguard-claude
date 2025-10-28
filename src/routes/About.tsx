@@ -31,8 +31,22 @@ const About = () => {
       </section>
 
       {/* Image + Text Section */}
-      <section className="py-12 sm:py-16 bg-white">
-        <div className="section-padding container-max">
+      <section className="py-12 sm:py-16 bg-gradient-to-br from-white via-slate-50 to-white relative overflow-hidden">
+        {/* Floating Decorative Elements - Hidden on mobile */}
+        <div className="hidden md:block absolute top-10 right-10 w-24 h-24 bg-lime-green/10 rounded-full blur-2xl animate-float-slow"></div>
+        <div className="hidden md:block absolute bottom-20 left-10 w-32 h-32 bg-baby-blue/10 rounded-full blur-2xl animate-float-slow" style={{animationDelay: '1s'}}></div>
+        <div className="hidden lg:block absolute top-1/3 right-1/4 w-16 h-16 bg-lime-green/5 rounded-full blur-xl animate-float-slow" style={{animationDelay: '0.5s'}}></div>
+
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 opacity-[0.015]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `linear-gradient(to right, #15354A 1px, transparent 1px),
+                             linear-gradient(to bottom, #15354A 1px, transparent 1px)`,
+            backgroundSize: '60px 60px'
+          }}></div>
+        </div>
+
+        <div className="section-padding container-max relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div className="relative h-64 sm:h-80 lg:h-full lg:min-h-[400px] rounded-2xl overflow-hidden shadow-2xl">
               <img
@@ -114,11 +128,14 @@ const About = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-white/98 via-white/97 to-white/98"></div>
         </div>
         <div className="section-padding container-max relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-navy mb-4">Our Core Values</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              These values shape our culture, guide our decisions, and define our relationships with clients and colleagues.
-            </p>
+          {/* Text Container with Background Panel for Better Contrast */}
+          <div className="text-center mb-12 max-w-4xl mx-auto">
+            <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-xl border border-slate-200/60">
+              <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Our Core Values</h2>
+              <p className="text-lg md:text-xl text-slate-700 max-w-2xl mx-auto leading-relaxed">
+                These values shape our culture, guide our decisions, and define our relationships with clients and colleagues.
+              </p>
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {company.values.map((value, index) => (

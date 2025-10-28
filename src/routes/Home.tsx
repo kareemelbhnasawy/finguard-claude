@@ -29,7 +29,11 @@ const Home = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-24 md:py-32 relative overflow-hidden bg-gradient-to-b from-slate-50 to-white">
+      <section className="py-24 md:py-32 relative overflow-hidden bg-gradient-to-br from-slate-100 via-slate-50 to-baby-blue/5">
+        {/* Decorative Elements */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-lime-green/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-baby-blue/10 rounded-full blur-3xl"></div>
+
         <div className="section-padding container-max relative z-10">
           <div className="text-center mb-16">
             <span className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-lime-green/10 border border-lime-green/20 text-xs font-semibold tracking-[0.2em] uppercase text-lime-green mb-6">
@@ -49,18 +53,72 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services Preview */}
-      <section className="py-24 md:py-32 relative overflow-hidden bg-white">
+      {/* Stats Divider Section */}
+      <section className="relative py-16 md:py-20 overflow-hidden bg-gradient-to-br from-deep-navy via-steel-blue to-slate-blue-gray">
+        {/* Decorative Elements */}
+        <div className="absolute top-0 right-1/4 w-64 h-64 bg-lime-green/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/4 w-48 h-48 bg-baby-blue/10 rounded-full blur-3xl"></div>
+
         <div className="section-padding container-max relative z-10">
-          <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-lime-green/10 border border-lime-green/20 text-xs font-semibold tracking-[0.2em] uppercase text-lime-green mb-6">
-              <span className="w-2 h-2 bg-lime-green rounded-full"></span>
-              What We Do
-            </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy mb-6 tracking-tight">Our Services</h2>
-            <p className="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-              {company.servicesIntro}
-            </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
+            <div className="space-y-2">
+              <div className="text-4xl md:text-5xl font-bold text-lime-green">300+</div>
+              <div className="text-sm md:text-base text-white/90 font-medium">Active Clients</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-4xl md:text-5xl font-bold text-lime-green">$2.5B+</div>
+              <div className="text-sm md:text-base text-white/90 font-medium">Assets Managed</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-4xl md:text-5xl font-bold text-lime-green">25+</div>
+              <div className="text-sm md:text-base text-white/90 font-medium">Years Experience</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-4xl md:text-5xl font-bold text-lime-green">99%</div>
+              <div className="text-sm md:text-base text-white/90 font-medium">Satisfaction Rate</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Preview */}
+      <section className="py-24 md:py-32 relative overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1920&q=80"
+            alt="Modern office workspace"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/97 via-white/95 to-white/97"></div>
+        </div>
+
+        {/* Diagonal Pattern Overlay */}
+        <div className="absolute inset-0 opacity-[0.03]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `repeating-linear-gradient(
+              45deg,
+              transparent,
+              transparent 40px,
+              #15354A 40px,
+              #15354A 41px
+            )`
+          }}></div>
+        </div>
+
+        <div className="section-padding container-max relative z-10">
+          {/* Text Container with Background Panel */}
+          <div className="text-center mb-16 max-w-5xl mx-auto">
+            <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl border border-slate-200/50">
+              <span className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-lime-green/15 border border-lime-green/30 text-xs font-semibold tracking-[0.2em] uppercase text-lime-green mb-6">
+                <span className="w-2 h-2 bg-lime-green rounded-full"></span>
+                What We Do
+              </span>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy mb-6 tracking-tight">Our Services</h2>
+              <p className="text-xl md:text-2xl text-slate-700 max-w-4xl mx-auto leading-relaxed">
+                {company.servicesIntro}
+              </p>
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {company.services.map((service, index) => (
@@ -76,7 +134,11 @@ const Home = () => {
       </section>
 
       {/* Split Image + Text Section */}
-      <section className="bg-gradient-to-b from-slate-50 to-white">
+      <section className="bg-gradient-to-br from-deep-navy via-slate-blue-gray to-deep-navy relative overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute top-20 right-20 w-64 h-64 bg-lime-green/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-48 h-48 bg-baby-blue/10 rounded-full blur-3xl"></div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="relative h-96 sm:h-[32rem] lg:h-auto order-1 lg:order-none group overflow-hidden">
             <img
@@ -84,20 +146,20 @@ const Home = () => {
               alt="Financial analysis and reporting"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-deep-navy/40 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-deep-navy/60 to-deep-navy/30"></div>
           </div>
-          <div className="flex items-center justify-center p-8 sm:p-12 md:p-16 lg:p-20 order-2 lg:order-none">
+          <div className="flex items-center justify-center p-8 sm:p-12 md:p-16 lg:p-20 order-2 lg:order-none relative z-10">
             <div className="max-w-xl space-y-6">
-              <span className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-lime-green/10 border border-lime-green/20 text-xs font-semibold tracking-[0.2em] uppercase text-lime-green">
+              <span className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-lime-green/20 border border-lime-green/30 text-xs font-semibold tracking-[0.2em] uppercase text-lime-green">
                 Our Commitment
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy leading-tight tracking-tight">Precision You Can Trust</h2>
-              <p className="text-lg sm:text-xl text-slate-600 leading-relaxed">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight">Precision You Can Trust</h2>
+              <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
                 Our team of certified professionals brings decades of combined experience across audit,
                 tax, and advisory services. We deliver accurate, reliable insights that help you make
                 informed business decisions.
               </p>
-              <p className="text-lg sm:text-xl text-slate-600 leading-relaxed">
+              <p className="text-lg sm:text-xl text-white/80 leading-relaxed">
                 From compliance to strategy, we're your partner in navigating the complexities of
                 modern business finance.
               </p>

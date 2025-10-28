@@ -66,8 +66,20 @@ const Clients = () => {
       </section>
 
       {/* Industry Showcase with Images */}
-      <section className="py-12 sm:py-16 bg-white">
-        <div className="section-padding container-max">
+      <section className="py-12 sm:py-16 bg-gradient-to-br from-white via-slate-50/40 to-white relative overflow-hidden">
+        {/* Floating Decorative Elements - Responsive */}
+        <div className="hidden md:block absolute top-12 right-12 w-28 h-28 bg-lime-green/10 rounded-full blur-2xl animate-float-slow"></div>
+        <div className="hidden md:block absolute bottom-12 left-12 w-36 h-36 bg-baby-blue/10 rounded-full blur-3xl animate-float-slow" style={{animationDelay: '1.5s'}}></div>
+        <div className="hidden lg:block absolute top-1/3 left-1/3 w-20 h-20 bg-lime-green/6 rounded-full blur-xl animate-float-slow" style={{animationDelay: '0.7s'}}></div>
+
+        {/* Diagonal Pattern */}
+        <div className="absolute inset-0 opacity-[0.02]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, #15354A 35px, #15354A 36px)`
+          }}></div>
+        </div>
+
+        <div className="section-padding container-max relative z-10">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-navy mb-3 sm:mb-4">Sectors We Serve</h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto mb-8 sm:mb-12 px-4">

@@ -8,9 +8,17 @@ const Team = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-white via-slate-50 to-white py-32">
-        <div className="absolute -top-10 -left-10 w-96 h-96 bg-baby-blue/8 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-10 w-80 h-80 bg-lime-green/8 rounded-full blur-3xl"></div>
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-100 via-white to-slate-50 py-32">
+        <div className="absolute -top-10 -left-10 w-96 h-96 bg-baby-blue/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-10 w-80 h-80 bg-lime-green/10 rounded-full blur-3xl"></div>
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 opacity-[0.015]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `linear-gradient(to right, #15354A 1px, transparent 1px),
+                             linear-gradient(to bottom, #15354A 1px, transparent 1px)`,
+            backgroundSize: '80px 80px'
+          }}></div>
+        </div>
         <div className="section-padding container-max relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -45,7 +53,11 @@ const Team = () => {
       </section>
 
       {/* Team Members */}
-      <section className="relative py-32 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
+      <section className="relative py-32 bg-gradient-to-b from-white via-slate-50 to-white overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-lime-green/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-0 w-[350px] h-[350px] bg-baby-blue/8 rounded-full blur-3xl"></div>
+
         <div className="section-padding container-max relative z-10">
           <div className="max-w-6xl mx-auto space-y-20">
             {company.team.map((member) => (

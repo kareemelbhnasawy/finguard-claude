@@ -79,7 +79,7 @@ export const seoData = {
   },
   contact: {
     title: 'Contact Us - Finguard',
-    description: 'Get in touch with Finguard for expert audit, tax, and advisory services. Contact us at +20 23 836 299 or info@smmeg.com.',
+    description: 'Get in touch with Finguard for expert audit, tax, and advisory services. Contact us at +20 23 836 299 or info@finguardint.com.',
     canonical: 'https://www.finguardint.com/contact',
   },
 };

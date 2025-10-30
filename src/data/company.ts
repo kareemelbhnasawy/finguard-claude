@@ -5,9 +5,9 @@ export const company = {
   geography: "Egypt and Saudi Arabia",
   contact: {
     phone: "+20 23 836 299",
-    email: "info@smmeg.com",
+    email: "info@finguardint.com",
     website: "www.Finguardint.com",
-    ctas: [{ label: "Contact Us", href: "mailto:info@smmeg.com" }, { label: "Explore Services", href: "/services" }]
+    ctas: [{ label: "Contact Us", href: "mailto:info@finguardint.com" }, { label: "Explore Services", href: "/services" }]
   },
   about:
     "Finguard is a trusted partner for businesses across Egypt and Saudi Arabia, delivering expert Audit, Tax, Advisory, and Financial Services. We combine deep industry knowledge with a client-focused approach to provide solutions that drive growth, strengthen compliance, and build long-term trust.",

@@ -198,4 +198,4 @@ This project is proprietary software for Finguard. All rights reserved.
 
 **Finguard** - Empowering businesses with trusted audit, tax, and advisory services across Egypt and Saudi Arabia.
 
-For support: [info@smmeg.com](mailto:info@smmeg.com) | Phone: +20 23 836 299# finguard-claude
+For support: [info@finguardint.com](mailto:info@finguardint.com) | Phone: +20 23 836 299# finguard-claude

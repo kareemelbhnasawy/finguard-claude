@@ -72,16 +72,19 @@ const About = () => {
       </section>
 
       {/* Mission and Vision */}
-      <section className="py-16 relative overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&q=80"
-            alt="Business vision"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-white/98 via-light-gray/97 to-white/98"></div>
+      <section className="py-16 relative overflow-hidden bg-gradient-to-br from-deep-navy via-slate-blue-gray to-deep-navy">
+        {/* Decorative Elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-lime-green/10 rounded-full blur-3xl animate-float-slow"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-baby-blue/10 rounded-full blur-3xl animate-float-slow" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-lime-green/5 rounded-full blur-2xl animate-float-slow" style={{animationDelay: '0.7s'}}></div>
+
+        {/* Diagonal Pattern Overlay */}
+        <div className="absolute inset-0 opacity-[0.03]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, #A4D65E 35px, #A4D65E 36px)`
+          }}></div>
         </div>
+
         <div className="section-padding container-max relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="bg-deep-navy p-8 rounded-lg shadow-sm border border-gray-100">

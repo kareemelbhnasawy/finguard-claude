@@ -31,16 +31,18 @@ const Clients = () => {
       </section>
 
       {/* Stats */}
-      <section className="py-16 relative overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=80"
-            alt="Financial analysis"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-white/98 via-light-gray/97 to-white/98"></div>
+      <section className="py-16 relative overflow-hidden bg-gradient-to-br from-white via-slate-50/60 to-white">
+        {/* Decorative Elements */}
+        <div className="absolute top-0 left-1/4 w-72 h-72 bg-lime-green/8 rounded-full blur-3xl animate-float-slow"></div>
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-baby-blue/8 rounded-full blur-3xl animate-float-slow" style={{animationDelay: '1.2s'}}></div>
+
+        {/* Diagonal Pattern Overlay */}
+        <div className="absolute inset-0 opacity-[0.015]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 40px, #15354A 40px, #15354A 41px)`
+          }}></div>
         </div>
+
         <div className="section-padding container-max relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="bg-deep-navy p-8 rounded-lg shadow-sm border border-gray-100 hover-lift hover-glow-green transition-smooth">
@@ -134,16 +136,20 @@ const Clients = () => {
       </section>
 
       {/* Client Sectors */}
-      <section className="py-16 relative overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80"
-            alt="Modern business district"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-white/98 via-light-gray/97 to-white/98"></div>
+      <section className="py-16 relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100">
+        {/* Decorative Elements */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-lime-green/10 rounded-full blur-3xl animate-float-slow"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-baby-blue/12 rounded-full blur-3xl animate-float-slow" style={{animationDelay: '1.8s'}}></div>
+        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-lime-green/6 rounded-full blur-2xl animate-float-slow" style={{animationDelay: '0.9s'}}></div>
+
+        {/* Dot Pattern Overlay */}
+        <div className="absolute inset-0 opacity-[0.025]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle, #15354A 1px, transparent 1px)`,
+            backgroundSize: '30px 30px'
+          }}></div>
         </div>
+
         <div className="section-padding container-max relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-navy mb-4">Our Clients</h2>
@@ -186,19 +192,23 @@ const Clients = () => {
       </section>
 
       {/* Why Clients Choose Us */}
-      <section className="py-16 relative overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&q=80"
-            alt="Business collaboration"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-white/98 via-white/97 to-white/98"></div>
+      <section className="py-16 relative overflow-hidden bg-gradient-to-br from-deep-navy via-slate-blue-gray to-deep-navy">
+        {/* Decorative Elements */}
+        <div className="absolute top-10 right-10 w-80 h-80 bg-lime-green/15 rounded-full blur-3xl animate-float-slow"></div>
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-baby-blue/15 rounded-full blur-3xl animate-float-slow" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-lime-green/8 rounded-full blur-2xl animate-float-slow" style={{animationDelay: '0.5s'}}></div>
+
+        {/* Grid Pattern Overlay */}
+        <div className="absolute inset-0 opacity-[0.02]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `linear-gradient(to right, #A4D65E 1px, transparent 1px), linear-gradient(to bottom, #A4D65E 1px, transparent 1px)`,
+            backgroundSize: '50px 50px'
+          }}></div>
         </div>
+
         <div className="section-padding container-max relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-navy text-center mb-12">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
               Why Clients Choose Finguard
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

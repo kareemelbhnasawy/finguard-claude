@@ -212,58 +212,58 @@ const Clients = () => {
               Why Clients Choose Finguard
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-deep-navy p-6 rounded-lg shadow-sm border border-gray-100">
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="flex items-center mb-4">
-                  <div className="p-3 bg-lime-green/20 rounded-lg">
+                  <div className="p-3 bg-lime-green/30 rounded-lg">
                     <svg className="h-6 w-6 text-lime-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
                   <h3 className="ml-3 text-lg font-semibold text-white">Industry Expertise</h3>
                 </div>
-                <p className="text-gray-300">
+                <p className="text-gray-200">
                   Deep understanding of sector-specific challenges and regulatory requirements across multiple industries.
                 </p>
               </div>
 
-              <div className="bg-deep-navy p-6 rounded-lg shadow-sm border border-gray-100">
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="flex items-center mb-4">
-                  <div className="p-3 bg-lime-green/20 rounded-lg">
+                  <div className="p-3 bg-lime-green/30 rounded-lg">
                     <svg className="h-6 w-6 text-lime-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
                   <h3 className="ml-3 text-lg font-semibold text-white">Timely Delivery</h3>
                 </div>
-                <p className="text-gray-300">
+                <p className="text-gray-200">
                   Consistent track record of meeting deadlines and delivering quality work within agreed timeframes.
                 </p>
               </div>
 
-              <div className="bg-deep-navy p-6 rounded-lg shadow-sm border border-gray-100">
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="flex items-center mb-4">
-                  <div className="p-3 bg-lime-green/20 rounded-lg">
+                  <div className="p-3 bg-lime-green/30 rounded-lg">
                     <svg className="h-6 w-6 text-lime-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                   </div>
                   <h3 className="ml-3 text-lg font-semibold text-white">Personal Service</h3>
                 </div>
-                <p className="text-gray-300">
+                <p className="text-gray-200">
                   Direct access to senior professionals who understand your business and provide personalized attention.
                 </p>
               </div>
 
-              <div className="bg-deep-navy p-6 rounded-lg shadow-sm border border-gray-100">
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg shadow-xl border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="flex items-center mb-4">
-                  <div className="p-3 bg-lime-green/20 rounded-lg">
+                  <div className="p-3 bg-lime-green/30 rounded-lg">
                     <svg className="h-6 w-6 text-lime-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                     </svg>
                   </div>
                   <h3 className="ml-3 text-lg font-semibold text-white">Innovative Solutions</h3>
                 </div>
-                <p className="text-gray-300">
+                <p className="text-gray-200">
                   Forward-thinking approaches that leverage technology and best practices to optimize outcomes.
                 </p>
               </div>

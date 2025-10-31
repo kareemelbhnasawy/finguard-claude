@@ -67,21 +67,21 @@ const SectorList = ({ title, companies }: SectorListProps) => {
 
   return (
     <section className="mb-8" ref={ref}>
-      <h3 className="text-xl font-semibold text-white mb-4 border-b border-lime-green/30 pb-2">
+      <h3 className="text-xl font-semibold text-navy mb-4 border-b border-lime-green/40 pb-2">
         {formatSectorTitle(title)}
       </h3>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
         {companies.map((company, index) => (
           <div
             key={index}
-            className={`bg-deep-navy rounded-lg p-6 shadow-sm border border-gray-100 flex items-center justify-center min-h-[120px] hover-lift hover-glow-green transition-smooth opacity-0 ${
+            className={`bg-white rounded-lg p-6 shadow-lg border border-gray-200 flex items-center justify-center min-h-[120px] hover-lift hover-glow-green transition-smooth opacity-0 ${
               isVisible ? 'animate-fade-in' : ''
             }`}
             style={{ animationDelay: `${index * 0.05}s` }}
           >
             <div className="text-center">
               <LogoOrPlaceholder companyName={company} />
-              <span className="text-sm font-medium text-gray-300 block">{company}</span>
+              <span className="text-sm font-medium text-gray-700 block">{company}</span>
             </div>
           </div>
         ))}

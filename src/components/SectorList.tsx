@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { localLogos } from '../data/logos';
+import type { Client } from '../types/data';
 
 interface SectorListProps {
   title: string;
-  companies: string[];
+  companies: Client[];
 }
 
 const SectorList = ({ title, companies }: SectorListProps) => {
@@ -80,8 +81,8 @@ const SectorList = ({ title, companies }: SectorListProps) => {
             style={{ animationDelay: `${index * 0.05}s` }}
           >
             <div className="text-center">
-              <LogoOrPlaceholder companyName={company} />
-              <span className="text-sm font-medium text-gray-700 block">{company}</span>
+              <LogoOrPlaceholder companyName={company.name} />
+              <span className="text-sm font-medium text-gray-700 block">{company.name}</span>
             </div>
           </div>
         ))}

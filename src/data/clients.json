@@ -1,0 +1,154 @@
+{
+  "banks": [
+    {
+      "name": "QNB",
+      "sector": "Banking & Finance"
+    },
+    {
+      "name": "Egyptian Gulf Bank",
+      "sector": "Banking & Finance"
+    },
+    {
+      "name": "Faisal Islamic Bank of Egypt",
+      "sector": "Banking & Finance"
+    },
+    {
+      "name": "CIB Fund – Aman",
+      "sector": "Banking & Finance"
+    },
+    {
+      "name": "Faisal Islamic Bank Fund",
+      "sector": "Banking & Finance"
+    }
+  ],
+  "industrial": [
+    {
+      "name": "Eastern Company S.A.E.",
+      "sector": "Manufacturing & Industrial"
+    },
+    {
+      "name": "Halawani Brothers Egypt",
+      "sector": "Manufacturing & Industrial"
+    },
+    {
+      "name": "Advanced Chemicals & Technology",
+      "sector": "Manufacturing & Industrial"
+    },
+    {
+      "name": "Egypt Cables Electricity Factory",
+      "sector": "Manufacturing & Industrial"
+    },
+    {
+      "name": "SMD",
+      "sector": "Manufacturing & Industrial"
+    }
+  ],
+  "tourismHotels": [
+    {
+      "name": "Delmar for Touristic",
+      "sector": "Tourism & Hotels"
+    },
+    {
+      "name": "Porto World for Touristic",
+      "sector": "Tourism & Hotels"
+    },
+    {
+      "name": "Four Seasons Hotel",
+      "sector": "Tourism & Hotels"
+    },
+    {
+      "name": "InterContinental Hotels",
+      "sector": "Tourism & Hotels"
+    }
+  ],
+  "constructionHousing": [
+    {
+      "name": "Talaat Moustafa Group (TMG)",
+      "sector": "Construction & Housing"
+    },
+    {
+      "name": "Coldwell Banker Egypt (Betna Real Estate)",
+      "sector": "Construction & Housing"
+    },
+    {
+      "name": "Alrowad Real-Estate Development",
+      "sector": "Construction & Housing"
+    },
+    {
+      "name": "Cairo Housing",
+      "sector": "Construction & Housing"
+    },
+    {
+      "name": "Ökoplan for Engineering Consulting",
+      "sector": "Construction & Housing"
+    }
+  ],
+  "trading": [
+    {
+      "name": "FMCG company for trading and distribution",
+      "sector": "Trading"
+    },
+    {
+      "name": "National Fresh Food Co.",
+      "sector": "Trading"
+    },
+    {
+      "name": "Abdulaha Balsharaf Est.",
+      "sector": "Trading"
+    },
+    {
+      "name": "Yessayan Jewelry Co.",
+      "sector": "Trading"
+    },
+    {
+      "name": "Get Palma",
+      "sector": "Trading"
+    }
+  ],
+  "educationTelecom": [
+    {
+      "name": "Advanced Educational Business Company",
+      "sector": "Education & Telecom"
+    },
+    {
+      "name": "Afaq Company for Educational and Rehabilitation Services",
+      "sector": "Education & Telecom"
+    },
+    {
+      "name": "Zedny for Training Company",
+      "sector": "Education & Telecom"
+    }
+  ],
+  "agriculture": [
+    {
+      "name": "AL Ghanim Agriculture – Egypt",
+      "sector": "Agriculture"
+    },
+    {
+      "name": "PNG Advanced Agriculture Solutions",
+      "sector": "Agriculture"
+    },
+    {
+      "name": "Zon Gardens",
+      "sector": "Agriculture"
+    }
+  ],
+  "investment": [
+    {
+      "name": "Pioneers Holding",
+      "sector": "Investment"
+    },
+    {
+      "name": "International Advisor for Securities Underwriting",
+      "sector": "Investment"
+    },
+    {
+      "name": "Pioneers-securities",
+      "sector": "Investment"
+    },
+    {
+      "name": "AMWAL Financial Investments",
+      "sector": "Investment"
+    }
+  ]
+}

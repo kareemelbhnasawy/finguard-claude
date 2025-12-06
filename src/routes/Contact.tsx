@@ -13,9 +13,9 @@ const Contact = () => {
         <div className="absolute bottom-8 left-8 w-16 h-16 bg-baby-blue/10 rounded-full blur-lg"></div>
         <div className="section-padding container-max">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl font-bold text-navy mb-6">Contact Us</h1>
+            <h1 className="text-4xl font-bold text-navy mb-6">{company.content.contact.hero.title}</h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Ready to discuss how we can support your business? Get in touch with our team today.
+              {company.content.contact.hero.description}
             </p>
           </div>
         </div>
@@ -42,10 +42,9 @@ const Contact = () => {
             {/* Contact Details */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-2xl font-bold text-navy mb-6">Get in Touch</h2>
+                <h2 className="text-2xl font-bold text-navy mb-6">{company.content.contact.contactSection.heading}</h2>
                 <p className="text-gray-600 mb-8">
-                  Our team is ready to help you with expert audit, tax, and advisory services.
-                  Contact us to discuss your specific needs and how we can support your business goals.
+                  {company.content.contact.contactSection.description}
                 </p>
               </div>
 
@@ -58,7 +57,7 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-semibold text-navy">Phone</h3>
+                    <h3 className="text-lg font-semibold text-navy">{company.content.contact.contactSection.labels.phone}</h3>
                     <a
                       href={`tel:${company.contact.phone}`}
                       className="text-gray-600 group-hover:text-lime-green transition-colors focus-visible:focus-visible"
@@ -76,7 +75,7 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-semibold text-navy">Email</h3>
+                    <h3 className="text-lg font-semibold text-navy">{company.content.contact.contactSection.labels.email}</h3>
                     <a
                       href={`mailto:${company.contact.email}`}
                       className="text-gray-600 group-hover:text-lime-green transition-colors focus-visible:focus-visible"
@@ -94,7 +93,7 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-semibold text-navy">Website</h3>
+                    <h3 className="text-lg font-semibold text-navy">{company.content.contact.contactSection.labels.website}</h3>
                     <span className="text-gray-600 group-hover:text-lime-green transition-colors">{company.contact.website}</span>
                   </div>
                 </div>
@@ -108,7 +107,7 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-semibold text-navy">Serving</h3>
+                    <h3 className="text-lg font-semibold text-navy">{company.content.contact.contactSection.labels.location}</h3>
                     <span className="text-gray-600 group-hover:text-lime-green transition-colors">{company.geography}</span>
                   </div>
                 </div>
@@ -138,9 +137,9 @@ const Contact = () => {
       <section className="py-16 bg-steel-blue">
         <div className="section-padding container-max">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">How Can We Help?</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">{company.content.contact.servicesQuickLinks.heading}</h2>
             <p className="text-lg text-white max-w-2xl mx-auto">
-              Explore our comprehensive range of services designed to support your business growth and compliance needs.
+              {company.content.contact.servicesQuickLinks.description}
             </p>
           </div>
 
@@ -152,14 +151,14 @@ const Contact = () => {
               >
                 <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
                 <p className="text-gray-300 text-sm mb-4">
-                  {service.bullets.slice(0, 2).join(', ')}
-                  {service.bullets.length > 2 && '...'}
+                  {service.items.slice(0, 2).join(', ')}
+                  {service.items.length > 2 && '...'}
                 </p>
                 <a
                   href={`/services#${service.id}`}
                   className="inline-flex items-center text-lime-green hover:text-lime-green/80 font-medium text-sm transition-colors focus-visible:focus-visible"
                 >
-                  Learn more
+                  {company.content.contact.servicesQuickLinks.learnMoreText}
                   <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -174,25 +173,19 @@ const Contact = () => {
       <section className="py-16 bg-light-gray">
         <div className="section-padding container-max">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-navy mb-6">Business Hours</h2>
+            <h2 className="text-2xl font-bold text-navy mb-6">{company.content.contact.businessHours.heading}</h2>
             <div className="bg-deep-navy p-8 rounded-lg shadow-sm border border-gray-100">
               <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="font-medium text-white">Monday - Thursday</span>
-                  <span className="text-gray-300">9:00 AM - 6:00 PM</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="font-medium text-white">Friday</span>
-                  <span className="text-gray-300">9:00 AM - 5:00 PM</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="font-medium text-white">Saturday - Sunday</span>
-                  <span className="text-gray-300">Closed</span>
-                </div>
+                {company.content.contact.businessHours.schedule.map((item, index) => (
+                  <div key={index} className="flex justify-between items-center">
+                    <span className="font-medium text-white">{item.days}</span>
+                    <span className="text-gray-300">{item.hours}</span>
+                  </div>
+                ))}
               </div>
               <div className="mt-6 pt-6 border-t border-gray-100">
                 <p className="text-sm text-gray-300">
-                  Emergency consultations available by appointment outside regular hours.
+                  {company.content.contact.businessHours.note}
                 </p>
               </div>
             </div>

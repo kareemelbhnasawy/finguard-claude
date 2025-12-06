@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "heading": "Our Clients",
+    "subheading": "We proudly serve over 300 companies across banking, construction, manufacturing, tourism, education, and agriculture. From multinational corporations to fast-growing enterprises, we provide tailored solutions that drive measurable results and sustained growth."
+  },
+  "stats": [
+    {
+      "value": 300,
+      "suffix": "+",
+      "label": "Companies Served",
+      "duration": 2500
+    },
+    {
+      "value": 8,
+      "label": "Industry Sectors",
+      "duration": 2000
+    },
+    {
+      "value": 2,
+      "label": "Countries",
+      "duration": 1500
+    }
+  ],
+  "sectorsShowcase": {
+    "heading": "Sectors We Serve",
+    "subheading": "Trusted by leading organizations across diverse industries"
+  },
+  "clientsList": {
+    "heading": "Our Clients",
+    "subheading": "Our diverse client portfolio spans multiple sectors, from established multinational corporations to fast-growing enterprises across Egypt and Saudi Arabia."
+  },
+  "testimonial": {
+    "quote": "Working with Finguard has been instrumental in our growth. Their expertise in audit and advisory services has helped us navigate complex regulatory requirements while maintaining focus on our core business objectives.",
+    "author": "Egyptian Gulf Bank, CEO"
+  },
+  "whyChoose": {
+    "heading": "Why Clients Choose Us",
+    "subheading": "Partner with a firm that combines deep expertise, innovative solutions, and unwavering commitment to your success",
+    "reasons": [
+      {
+        "title": "Regional Expertise",
+        "description": "Comprehensive knowledge of Egyptian and Saudi Arabian markets, regulations, and business practices"
+      },
+      {
+        "title": "Industry Leaders",
+        "description": "Our partners and directors bring decades of Big Four and multinational experience"
+      },
+      {
+        "title": "Tailored Solutions",
+        "description": "We adapt our services to fit your specific industry, size, and growth objectives"
+      },
+      {
+        "title": "Long-Term Partnership",
+        "description": "We don't just deliver reports—we build lasting relationships focused on sustained success"
+      }
+    ]
+  }
+}

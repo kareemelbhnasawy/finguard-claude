@@ -1,0 +1,58 @@
+[
+  {
+    "id": "audit-assurance",
+    "title": "Audit & Assurance",
+    "description": "Comprehensive audit services ensuring compliance and accuracy.",
+    "items": [
+      "Statutory and Regulatory Audit",
+      "Internal Control Review",
+      "Forensic and Accountant's Report",
+      "Independent Accountant's Report"
+    ]
+  },
+  {
+    "id": "accounting-bookkeeping",
+    "title": "Accounting & Bookkeeping",
+    "description": "Professional accounting services for financial clarity.",
+    "items": [
+      "IFRS compliance",
+      "Reconciliations",
+      "Dashboards",
+      "Management reporting"
+    ]
+  },
+  {
+    "id": "tax-services",
+    "title": "Tax Services",
+    "description": "Strategic tax planning and compliance solutions.",
+    "items": [
+      "VAT and withholding compliance",
+      "Tax planning",
+      "Group restructuring",
+      "Due diligence",
+      "Advisory for foreign investors"
+    ]
+  },
+  {
+    "id": "regulatory-legal",
+    "title": "Regulatory & Legal Support",
+    "description": "Comprehensive regulatory and legal guidance.",
+    "items": [
+      "Social insurance compliance",
+      "Labor law support",
+      "Contract drafting",
+      "Trademark registration"
+    ]
+  },
+  {
+    "id": "advisory-consultancy",
+    "title": "Advisory & Consultancy",
+    "description": "Strategic advisory for business growth and optimization.",
+    "items": [
+      "Financial due diligence",
+      "IFRS model development",
+      "Risk management",
+      "Organizational performance improvements"
+    ]
+  }
+]

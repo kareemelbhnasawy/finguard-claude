@@ -2,10 +2,10 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 
 interface ValueCardProps {
   title: string;
-  blurb: string;
+  description: string;
 }
 
-const ValueCard = ({ title, blurb }: ValueCardProps) => {
+const ValueCard = ({ title, description }: ValueCardProps) => {
   const { ref, isVisible } = useScrollReveal({ threshold: 0.3 });
   const getIcon = (title: string) => {
     switch (title.toLowerCase()) {
@@ -60,7 +60,7 @@ const ValueCard = ({ title, blurb }: ValueCardProps) => {
           {getIcon(title)}
         </div>
         <h3 className="text-xl font-bold text-navy mb-4 group-hover:text-lime-green transition-colors">{title}</h3>
-        <p className="text-slate-600 leading-relaxed text-base">{blurb}</p>
+        <p className="text-slate-600 leading-relaxed text-base">{description}</p>
       </div>
     </div>
   );

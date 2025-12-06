@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "title": "About Finguard"
+  },
+  "trustedPartners": {
+    "heading": "Trusted Partners in Your Success",
+    "paragraph1": "With decades of combined experience, we've built lasting relationships with businesses across Egypt and Saudi Arabia. Our team of certified professionals brings deep expertise in audit, tax, and advisory services.",
+    "paragraph2": "We pride ourselves on delivering personalized service that goes beyond compliance—we're here to help you achieve your strategic goals and navigate the complexities of modern business."
+  },
+  "valuesSection": {
+    "heading": "Our Core Values",
+    "description": "These values shape our culture, guide our decisions, and define our relationships with clients and colleagues."
+  },
+  "expertiseInAction": {
+    "heading": "Our Expertise in Action",
+    "description": "From boardrooms to financial reports, we deliver excellence across every aspect of your business",
+    "items": [
+      {
+        "title": "Strategic Advisory",
+        "description": "Expert guidance for your business decisions"
+      },
+      {
+        "title": "Financial Reporting",
+        "description": "Accurate, compliant financial documentation"
+      },
+      {
+        "title": "Collaborative Approach",
+        "description": "Working together for your success"
+      }
+    ]
+  },
+  "geography": {
+    "heading": "Serving the Region",
+    "description": "Our expertise spans across {geography}, where we've built a reputation for excellence and reliability in the financial services sector. We understand the unique regulatory landscapes and business environments of these dynamic markets.",
+    "locations": [
+      {
+        "name": "Egypt"
+      },
+      {
+        "name": "Saudi Arabia"
+      }
+    ]
+  }
+}

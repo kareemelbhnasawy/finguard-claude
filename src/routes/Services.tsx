@@ -20,9 +20,9 @@ const Services = () => {
 
         <div className="section-padding container-max relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Services</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">{company.content.services.hero.title}</h1>
             <p className="text-xl text-gray-200 leading-relaxed">
-              {company.servicesIntro}
+              {company.content.services.hero.intro}
             </p>
           </div>
         </div>
@@ -77,12 +77,12 @@ const Services = () => {
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-4">Services Include:</h3>
                       <ul className="space-y-3">
-                        {service.bullets.map((bullet, bulletIndex) => (
-                          <li key={bulletIndex} className="flex items-start">
+                        {service.items.map((item, itemIndex) => (
+                          <li key={itemIndex} className="flex items-start">
                             <svg className="h-5 w-5 text-baby-blue mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                             </svg>
-                            <span className="text-white">{bullet}</span>
+                            <span className="text-white">{item}</span>
                           </li>
                         ))}
                       </ul>
@@ -91,7 +91,7 @@ const Services = () => {
                     <div className="bg-steel-blue rounded-lg p-6 border border-baby-blue/20">
                       <h3 className="text-lg font-semibold text-white mb-4">Why Choose Our {service.title}?</h3>
                       <p className="text-white leading-relaxed">
-                        {getServiceDescription(service.id)}
+                        {service.description || company.content.services.serviceDescriptions[service.id as keyof typeof company.content.services.serviceDescriptions] || "Expert professional services tailored to your business needs."}
                       </p>
                     </div>
                   </div>
@@ -105,7 +105,7 @@ const Services = () => {
                       <svg className="mr-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
                       </svg>
-                      Back to top
+                      {company.content.services.ctaText}
                     </a>
                   </div>
                 </div>
@@ -156,23 +156,6 @@ const getServiceIcon = (id: string) => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m8 6V8a2 2 0 00-2-2H10a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2z" />
         </svg>
       );
-  }
-};
-
-const getServiceDescription = (id: string): string => {
-  switch (id) {
-    case 'audit-assurance':
-      return "Our comprehensive audit and assurance services provide stakeholders with confidence in financial reporting. We combine technical expertise with industry knowledge to deliver thorough, reliable audits that meet regulatory requirements and support business growth.";
-    case 'accounting-bookkeeping':
-      return "We ensure your financial records are accurate, compliant, and provide meaningful insights for decision-making. Our accounting services help maintain financial transparency and support strategic planning with reliable data and reporting.";
-    case 'tax-services':
-      return "Navigate complex tax regulations with confidence. Our tax professionals stay current with evolving legislation to ensure compliance while identifying opportunities for tax optimization and strategic planning.";
-    case 'regulatory-legal':
-      return "Stay compliant with ever-changing regulatory requirements. We provide comprehensive support to help you navigate legal complexities and maintain good standing with regulatory authorities.";
-    case 'advisory-consultancy':
-      return "Leverage our deep industry expertise to make informed strategic decisions. Our advisory services provide the insights and guidance needed to optimize performance, manage risks, and capitalize on opportunities.";
-    default:
-      return "Expert professional services tailored to your business needs.";
   }
 };
 

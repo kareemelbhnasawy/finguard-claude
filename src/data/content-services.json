@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "title": "Our Services",
+    "intro": "Comprehensive financial and professional services tailored to your business needs across audit, tax, advisory, and regulatory compliance."
+  },
+  "serviceDescriptions": {
+    "audit-assurance": "Our comprehensive audit and assurance services provide stakeholders with confidence in financial reporting. We combine technical expertise with industry knowledge to deliver thorough, reliable audits that meet regulatory requirements and support business growth.",
+    "accounting-bookkeeping": "We ensure your financial records are accurate, compliant, and provide meaningful insights for decision-making. Our accounting services help maintain financial transparency and support strategic planning with reliable data and reporting.",
+    "tax-services": "Navigate complex tax regulations with confidence. Our tax professionals stay current with evolving legislation to ensure compliance while identifying opportunities for tax optimization and strategic planning.",
+    "regulatory-legal": "Stay compliant with ever-changing regulatory requirements. We provide comprehensive support to help you navigate legal complexities and maintain good standing with regulatory authorities.",
+    "advisory-consultancy": "Leverage our deep industry expertise to make informed strategic decisions. Our advisory services provide the insights and guidance needed to optimize performance, manage risks, and capitalize on opportunities."
+  },
+  "ctaText": "Back to top"
+}

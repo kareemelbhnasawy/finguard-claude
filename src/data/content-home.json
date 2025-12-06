@@ -1,0 +1,56 @@
+{
+  "hero": {
+    "heading": "Trusted Audit, Tax & Advisory",
+    "subheading": "Empowering businesses across Egypt and Saudi Arabia with expert financial solutions",
+    "cta": {
+      "primary": {
+        "label": "Get Started",
+        "href": "/contact"
+      },
+      "secondary": {
+        "label": "Our Services",
+        "href": "/services"
+      }
+    }
+  },
+  "banner": {
+    "heading": "Empowering Business Success",
+    "subheading": "Combining expertise, innovation, and personal service to help your business thrive"
+  },
+  "valuesSection": {
+    "badge": "Our Foundation",
+    "heading": "Our Core Values",
+    "subheading": "The principles that guide everything we do"
+  },
+  "stats": [
+    {
+      "value": "300+",
+      "label": "Active Clients"
+    },
+    {
+      "value": "$2.5B+",
+      "label": "Assets Managed"
+    },
+    {
+      "value": "25+",
+      "label": "Years Experience"
+    },
+    {
+      "value": "99%",
+      "label": "Satisfaction Rate"
+    }
+  ],
+  "servicesSection": {
+    "badge": "What We Do",
+    "heading": "Comprehensive Financial Solutions",
+    "subheading": "We provide comprehensive financial, audit, and advisory support to help organizations operate with confidence and achieve measurable results."
+  },
+  "ctaSection": {
+    "heading": "Ready to grow your business?",
+    "subheading": "Let's discuss how we can help you achieve your financial goals",
+    "cta": {
+      "label": "Contact Us Today",
+      "href": "/contact"
+    }
+  }
+}

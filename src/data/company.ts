@@ -1,87 +1,61 @@
+// Import all JSON data files
 import teamData from './team.json';
 import clientsData from './clients.json';
+import companyInfoData from './company-info.json';
+import aboutData from './about.json';
+import valuesData from './values.json';
+import servicesData from './services.json';
+import homeContentData from './content-home.json';
+import teamContentData from './content-team.json';
+import clientsContentData from './content-clients.json';
+import servicesContentData from './content-services.json';
+import aboutContentData from './content-about.json';
+import contactContentData from './content-contact.json';
 
+// Export all data with proper structure
 export const company = {
-  brand: "Finguard",
-  taglineShort: "Audit, Tax & Advisory Services",
-  taglineLong: "Empowering businesses with trusted audit, tax, and advisory services.",
-  geography: "Egypt and Saudi Arabia",
-  contact: {
-    phone: "+20 23 836 299",
-    email: "info@finguardint.com",
-    website: "www.Finguardint.com",
-    ctas: [{ label: "Contact Us", href: "mailto:info@finguardint.com" }, { label: "Explore Services", href: "/services" }]
-  },
-  about:
-    "Finguard is a trusted partner for businesses across Egypt and Saudi Arabia, delivering expert Audit, Tax, Advisory, and Financial Services. We combine deep industry knowledge with a client-focused approach to provide solutions that drive growth, strengthen compliance, and build long-term trust.",
-  mission:
-    "To provide businesses with accurate, reliable, and innovative financial solutions that enable sustainable growth and informed decision-making.",
-  vision:
-    "To be the leading regional firm recognized for excellence, trust, and innovation in audit, tax, and advisory services.",
-  values: [
-    { title: "Trust", blurb: "We foster lasting relationships built on transparency and reliability." },
-    { title: "Integrity", blurb: "We uphold the highest ethical standards in everything we do." },
-    { title: "Excellence", blurb: "We deliver precise, high-quality solutions tailored to client needs." },
-    { title: "Innovation", blurb: "We embrace modern solutions to meet evolving business challenges." },
-    { title: "Commitment", blurb: "We dedicate ourselves to supporting clients' long-term success." }
-  ],
-  servicesIntro:
-    "We provide comprehensive financial, audit, and advisory support to help organizations operate with confidence and achieve measurable results.",
-  services: [
-    {
-      id: "audit-assurance",
-      title: "Audit & Assurance",
-      bullets: [
-        "Statutory and Regulatory Audit",
-        "Internal Control Review",
-        "Forensic and Accountant's Report",
-        "Independent Accountant's Report"
-      ]
-    },
-    {
-      id: "accounting-bookkeeping",
-      title: "Accounting & Bookkeeping",
-      bullets: [
-        "IFRS compliance",
-        "Reconciliations",
-        "Dashboards",
-        "Management reporting"
-      ]
-    },
-    {
-      id: "tax-services",
-      title: "Tax Services",
-      bullets: [
-        "VAT and withholding compliance",
-        "Tax planning",
-        "Group restructuring",
-        "Due diligence",
-        "Advisory for foreign investors"
-      ]
-    },
-    {
-      id: "regulatory-legal",
-      title: "Regulatory & Legal Support",
-      bullets: [
-        "Social insurance compliance",
-        "Labor law support",
-        "Contract drafting",
-        "Trademark registration"
-      ]
-    },
-    {
-      id: "advisory-consultancy",
-      title: "Advisory & Consultancy",
-      bullets: [
-        "Financial due diligence",
-        "IFRS model development",
-        "Risk management",
-        "Organizational performance improvements"
-      ]
-    }
-  ],
+  // Basic company information
+  ...companyInfoData,
+  
+  // About, mission, vision
+  ...aboutData,
+  
+  // Core data arrays
   team: teamData,
-  clientsIntro:
-    "We proudly serve over 300 companies across banking, construction, manufacturing, tourism, education, and agriculture. From multinational corporations to fast-growing enterprises, we provide tailored solutions that drive measurable results and sustained growth.",
-  clients: clientsData
+  clients: clientsData,
+  values: valuesData,
+  services: servicesData,
+  
+  // Page content
+  content: {
+    home: homeContentData,
+    team: teamContentData,
+    clients: clientsContentData,
+    services: servicesContentData,
+    about: aboutContentData,
+    contact: contactContentData,
+  },
+  
+  // CTAs (keeping for backward compatibility)
+  contact: {
+    ...companyInfoData.contact,
+    ctas: [
+      { label: "Contact Us", href: "mailto:info@finguardint.com" },
+      { label: "Explore Services", href: "/services" }
+    ]
+  }
 };
+
+// Export individual pieces for direct access
+export { teamData as team };
+export { clientsData as clients };
+export { valuesData as values };
+export { servicesData as services };
+export { companyInfoData as companyInfo };
+export { aboutData as about };
+export { homeContentData as homeContent };
+export { teamContentData as teamContent };
+export { clientsContentData as clientsContent };
+export { servicesContentData as servicesContent };
+export { aboutContentData as aboutContent };
+export { contactContentData as contactContent };

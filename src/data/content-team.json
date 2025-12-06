@@ -1,0 +1,17 @@
+{
+  "hero": {
+    "badge": "Leadership Team",
+    "heading": "Meet the experts who guide Finguard forward",
+    "subheading": "Our team brings together executive leaders, sector specialists, and technical advisors with decades of collective experience across audit, tax, advisory, and cybersecurity."
+  },
+  "intro": {
+    "globalStandards": {
+      "title": "Global Standards",
+      "description": "Each partner and director pairs international credentials with hands-on knowledge of local and regional markets, ensuring every engagement is grounded in both global standards and practical insight."
+    },
+    "strategicGuidance": {
+      "title": "Strategic Guidance",
+      "description": "Whether supporting multinational organizations or ambitious local enterprises, our team provides guidance that inspires confidence, protects value, and uncovers strategic opportunities."
+    }
+  }
+}

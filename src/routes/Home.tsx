@@ -49,7 +49,7 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {company.values.map((value, index) => (
-              <ValueCard key={index} title={value.title} blurb={value.blurb} />
+              <ValueCard key={index} title={value.title} description={value.description} />
             ))}
           </div>
         </div>
@@ -120,7 +120,7 @@ const Home = () => {
                 Our <span className="bg-gradient-to-r from-lime-green to-green-500 bg-clip-text text-transparent">Services</span>
               </h2>
               <p className="text-2xl md:text-3xl text-slate-700 max-w-4xl mx-auto leading-relaxed font-light">
-                {company.servicesIntro}
+                {company.content.home.servicesSection.subheading}
               </p>
             </div>
           </div>
@@ -130,7 +130,8 @@ const Home = () => {
                 key={index}
                 id={service.id}
                 title={service.title}
-                bullets={service.bullets}
+                description={service.description}
+                items={service.items}
               />
             ))}
           </div>

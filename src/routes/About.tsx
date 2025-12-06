@@ -22,7 +22,7 @@ const About = () => {
 
         <div className="section-padding container-max relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">About Finguard</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">{company.content.about.hero.title}</h1>
             <p className="text-xl text-gray-200 leading-relaxed">
               {company.about}
             </p>
@@ -56,15 +56,12 @@ const About = () => {
               />
             </div>
             <div className="order-first lg:order-none">
-              <h2 className="text-2xl sm:text-3xl font-bold text-navy mb-4 sm:mb-6">Trusted Partners in Your Success</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-navy mb-4 sm:mb-6">{company.content.about.trustedPartners.heading}</h2>
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-4 sm:mb-6">
-                With decades of combined experience, we've built lasting relationships with businesses across
-                Egypt and Saudi Arabia. Our team of certified professionals brings deep expertise in audit,
-                tax, and advisory services.
+                {company.content.about.trustedPartners.paragraph1}
               </p>
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                We pride ourselves on delivering personalized service that goes beyond compliance—we're here
-                to help you achieve your strategic goals and navigate the complexities of modern business.
+                {company.content.about.trustedPartners.paragraph2}
               </p>
             </div>
           </div>
@@ -134,15 +131,15 @@ const About = () => {
           {/* Text Container with Background Panel for Better Contrast */}
           <div className="text-center mb-12 max-w-4xl mx-auto">
             <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-10 shadow-xl border border-slate-200/60">
-              <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Our Core Values</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">{company.content.about.valuesSection.heading}</h2>
               <p className="text-lg md:text-xl text-slate-700 max-w-2xl mx-auto leading-relaxed">
-                These values shape our culture, guide our decisions, and define our relationships with clients and colleagues.
+                {company.content.about.valuesSection.description}
               </p>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {company.values.map((value, index) => (
-              <ValueCard key={index} title={value.title} blurb={value.blurb} />
+              <ValueCard key={index} title={value.title} description={value.description} />
             ))}
           </div>
         </div>
@@ -152,51 +149,29 @@ const About = () => {
       <section className="py-12 sm:py-16 bg-light-gray">
         <div className="section-padding container-max">
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-navy mb-3 sm:mb-4">Our Expertise in Action</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-navy mb-3 sm:mb-4">{company.content.about.expertiseInAction.heading}</h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-              From boardrooms to financial reports, we deliver excellence across every aspect of your business
+              {company.content.about.expertiseInAction.description}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-            <div className="relative h-48 sm:h-56 md:h-64 rounded-xl overflow-hidden group">
-              <img
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80"
-                alt="Business consultation"
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/90 via-deep-navy/50 to-transparent flex items-end p-6">
-                <div>
-                  <h3 className="text-white text-xl font-bold mb-2">Strategic Advisory</h3>
-                  <p className="text-gray-200 text-sm">Expert guidance for your business decisions</p>
+            {company.content.about.expertiseInAction.items.map((item, index) => (
+              <div key={index} className="relative h-48 sm:h-56 md:h-64 rounded-xl overflow-hidden group">
+                <img
+                  src={index === 0 ? "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80" : 
+                       index === 1 ? "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&q=80" :
+                       "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"}
+                  alt={item.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/90 via-deep-navy/50 to-transparent flex items-end p-6">
+                  <div>
+                    <h3 className="text-white text-xl font-bold mb-2">{item.title}</h3>
+                    <p className="text-gray-200 text-sm">{item.description}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="relative h-64 rounded-xl overflow-hidden group">
-              <img
-                src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&q=80"
-                alt="Financial analysis"
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/90 via-deep-navy/50 to-transparent flex items-end p-6">
-                <div>
-                  <h3 className="text-white text-xl font-bold mb-2">Financial Reporting</h3>
-                  <p className="text-gray-200 text-sm">Accurate, compliant financial documentation</p>
-                </div>
-              </div>
-            </div>
-            <div className="relative h-64 rounded-xl overflow-hidden group">
-              <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
-                alt="Team collaboration"
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/90 via-deep-navy/50 to-transparent flex items-end p-6">
-                <div>
-                  <h3 className="text-white text-xl font-bold mb-2">Collaborative Approach</h3>
-                  <p className="text-gray-200 text-sm">Working together for your success</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -210,31 +185,22 @@ const About = () => {
         <div className="absolute top-1/4 right-1/3 w-14 h-14 bg-baby-blue/15 rounded-full blur-lg pulse-glow" style={{animationDelay: '1.5s'}}></div>
         <div className="section-padding container-max">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Serving the Region</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">{company.content.about.geography.heading}</h2>
             <p className="text-lg text-gray-300 leading-relaxed mb-8">
-              Our expertise spans across {company.geography}, where we've built a reputation for excellence
-              and reliability in the financial services sector. We understand the unique regulatory landscapes
-              and business environments of these dynamic markets.
+              {company.content.about.geography.description.replace('{geography}', company.geography)}
             </p>
             <div className="flex justify-center space-x-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-lime-green/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <svg className="w-8 h-8 text-lime-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
+              {company.content.about.geography.locations.map((location, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-lime-green/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <svg className="w-8 h-8 text-lime-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="font-semibold text-white">{location.name}</h3>
                 </div>
-                <h3 className="font-semibold text-white">Egypt</h3>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-lime-green/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <svg className="w-8 h-8 text-lime-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <h3 className="font-semibold text-white">Saudi Arabia</h3>
-              </div>
+              ))}
             </div>
           </div>
         </div>

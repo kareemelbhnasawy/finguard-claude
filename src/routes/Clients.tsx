@@ -23,9 +23,9 @@ const Clients = () => {
 
         <div className="section-padding container-max relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Clients</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">{company.content.clients.hero.heading}</h1>
             <p className="text-xl text-gray-200 leading-relaxed">
-              {company.clientsIntro}
+              {company.content.clients.hero.subheading}
             </p>
           </div>
         </div>

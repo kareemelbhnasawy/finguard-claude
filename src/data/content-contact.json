@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "title": "Contact Us",
+    "description": "Ready to discuss how we can support your business? Get in touch with our team today."
+  },
+  "contactSection": {
+    "heading": "Get in Touch",
+    "description": "Our team is ready to help you with expert audit, tax, and advisory services. Contact us to discuss your specific needs and how we can support your business goals.",
+    "labels": {
+      "phone": "Phone",
+      "email": "Email",
+      "website": "Website",
+      "location": "Serving"
+    }
+  },
+  "servicesQuickLinks": {
+    "heading": "How Can We Help?",
+    "description": "Explore our comprehensive range of services designed to support your business growth and compliance needs.",
+    "learnMoreText": "Learn more"
+  },
+  "businessHours": {
+    "heading": "Business Hours",
+    "schedule": [
+      {
+        "days": "Monday - Thursday",
+        "hours": "9:00 AM - 6:00 PM"
+      },
+      {
+        "days": "Friday",
+        "hours": "9:00 AM - 5:00 PM"
+      },
+      {
+        "days": "Saturday - Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "note": "Emergency consultations available by appointment outside regular hours."
+  }
+}

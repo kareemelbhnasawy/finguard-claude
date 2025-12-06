@@ -80,6 +80,7 @@ export const localLogos: Record<string, string> = {
   'Abdulaha Balsharaf Est.': '/logos/balsharaf.png',
   'Yessayan Jewelry Co.': '/logos/yessayan.png',
   'Get Palma': '/logos/getpalma.png',
+  'Summit Tech Solutions': '/logos/summit-tech-solutions.svg',
 
   // Education & Telecommunications
   'Afaq Company for Educational and Rehabilitation Services': '/logos/afaqedu.png',

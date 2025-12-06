@@ -1,8 +1,9 @@
 import { useSEO, seoData } from '../lib/seo';
 import { company } from '../data/company';
-import SectorList from '../components/SectorList';
+import ClientCard from '../components/ClientCard';
 import AnimatedCounter from '../components/AnimatedCounter';
 import { images } from '../data/images';
+import type { Client } from '../types/data';
 
 const Clients = () => {
   useSEO(seoData.clients);
@@ -159,15 +160,25 @@ const Clients = () => {
             </p>
           </div>
 
-          <div className="space-y-12">
-            {Object.entries(company.sectors).map(([sectorKey, companies]) => (
-              <SectorList
-                key={sectorKey}
-                title={sectorKey}
-                companies={companies}
-              />
-            ))}
-          </div>
+          {/* Group clients by sector */}
+          {['Banking & Finance', 'Manufacturing & Industrial', 'Tourism & Hotels', 'Construction & Housing', 'Trading', 'Education & Telecom', 'Agriculture', 'Investment'].map((sectorName) => {
+            const sectorClients = company.clients.filter((client: Client) => client.sector === sectorName);
+            
+            if (sectorClients.length === 0) return null;
+            
+            return (
+              <section key={sectorName} className="mb-12">
+                <h3 className="text-xl font-semibold text-navy mb-4 border-b border-lime-green/40 pb-2">
+                  {sectorName}
+                </h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                  {sectorClients.map((client: Client, index: number) => (
+                    <ClientCard key={client.name} client={client} index={index} />
+                  ))}
+                </div>
+              </section>
+            );
+          })}
         </div>
       </section>
 

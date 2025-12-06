@@ -75,102 +75,69 @@ This file contains an array of team member objects. Each team member has the fol
 
 ### File: `clients.json`
 
-This file organizes clients by sector. Each sector contains an array of client objects:
+This file contains an array of client objects (just like `team.json`). Each client has the following structure:
 
 ```json
 {
-  "banks": [
-    {
-      "name": "QNB",
-      "sector": "Banking & Finance"
-    }
-  ],
-  "industrial": [...],
-  "tourismHotels": [...],
-  "constructionHousing": [...],
-  "trading": [...],
-  "educationTelecom": [...],
-  "agriculture": [...],
-  "investment": [...]
+  "name": "QNB",
+  "sector": "Banking & Finance",
+  "logo": "/logos/qnb.png"
 }
 ```
-
-### Sectors Available:
-
-- **banks**: Banking & Finance
-- **industrial**: Manufacturing & Industrial
-- **tourismHotels**: Tourism & Hotels
-- **constructionHousing**: Construction & Housing
-- **trading**: Trading & Distribution
-- **educationTelecom**: Education & Telecommunications
-- **agriculture**: Agriculture
-- **investment**: Investment & Securities
 
 ### Fields:
 
 - **name** (required): Company name
 - **sector** (required): Display name of the sector
+- **logo** (optional): Path to company logo (place in `/public/logos/`)
+
+### Available Sectors:
+
+- Banking & Finance
+- Manufacturing & Industrial
+- Tourism & Hotels
+- Construction & Housing
+- Trading
+- Education & Telecom
+- Agriculture
+- Investment
 
 ### Adding a New Client:
 
-1. Decide which sector the client belongs to
+1. Add the company logo to `/public/logos/` (e.g., `company-name.png`)
 2. Open `clients.json`
-3. Find the appropriate sector array
-4. Add a new client object:
+3. Add a new object to the array:
 
 ```json
 {
   "name": "New Company Name",
-  "sector": "Banking & Finance"
+  "sector": "Banking & Finance",
+  "logo": "/logos/company-name.png"
 }
 ```
 
-5. **(Optional)** Add the company logo to `/public/logos/` and update `src/data/logos.ts`
-6. Save the file
+4. Save the file - changes will appear automatically!
 
 ### Removing a Client:
 
 1. Open `clients.json`
-2. Find the sector containing the client
-3. Delete the client object
-4. Remove any trailing commas
-5. Save the file
+2. Find and delete the entire object for that client
+3. Remember to remove any trailing commas
+4. Save the file
 
 ### Editing a Client:
 
 1. Open `clients.json`
 2. Find the client object
-3. Edit the name or sector
+3. Edit any field (name, sector, logo path, etc.)
 4. Save the file
 
-### Moving a Client to a Different Sector:
+### Changing Client Sector:
 
-1. Copy the client object from the current sector
-2. Paste it into the new sector's array
-3. Delete it from the original sector
+1. Open `clients.json`
+2. Find the client object
+3. Change the `"sector"` value to a different sector
 4. Save the file
-
----
-
-## 🎨 Adding Client Logos (Optional)
-
-If you want to display company logos on the Clients page:
-
-1. Add the logo image to `/public/logos/` (use lowercase, no spaces)
-   - Example: `new-company.png`
-
-2. Open `/src/data/logos.ts`
-
-3. Add an entry to the `localLogos` object:
-
-```typescript
-export const localLogos: Record<string, string> = {
-  // ...existing logos...
-  "New Company Name": "/logos/new-company.png",
-};
-```
-
-4. The logo will automatically display on the Clients page!
 
 ---
 
@@ -234,29 +201,23 @@ export const localLogos: Record<string, string> = {
 
 3. Save and refresh - done! 🎉
 
-### Adding a new client "Tech Solutions Inc" in the Trading sector:
+### Adding a new client "Nile Bank" to Banking sector:
 
-1. Edit `clients.json`:
+1. Save logo as `/public/logos/nile-bank.png`
+
+2. Edit `clients.json`:
 ```json
-{
-  "trading": [
-    ...existing entries...,
-    {
-      "name": "Tech Solutions Inc",
-      "sector": "Trading"
-    }
-  ]
-}
+[
+  ...existing entries...,
+  {
+    "name": "Nile Bank",
+    "sector": "Banking & Finance",
+    "logo": "/logos/nile-bank.png"
+  }
+]
 ```
 
-2. (Optional) Add logo at `/public/logos/tech-solutions.png`
-
-3. (Optional) Edit `logos.ts`:
-```typescript
-"Tech Solutions Inc": "/logos/tech-solutions.png",
-```
-
-4. Save and refresh - done! 🎉
+3. Save and refresh - done! 🎉
 
 ---
 

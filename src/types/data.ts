@@ -12,9 +12,5 @@ export interface TeamMember {
 export interface Client {
   name: string;
   sector: string;
-}
-
-// Sector data type definition
-export interface SectorData {
-  [key: string]: Client[];
+  logo?: string;
 }

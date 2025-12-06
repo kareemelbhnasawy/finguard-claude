@@ -83,5 +83,5 @@ export const company = {
   team: teamData,
   clientsIntro:
     "We proudly serve over 300 companies across banking, construction, manufacturing, tourism, education, and agriculture. From multinational corporations to fast-growing enterprises, we provide tailored solutions that drive measurable results and sustained growth.",
-  sectors: clientsData
+  clients: clientsData
 };

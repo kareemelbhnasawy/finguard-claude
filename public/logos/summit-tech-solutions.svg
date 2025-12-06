@@ -1,0 +1,15 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#15354A"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="50" cy="50" r="30" fill="#9CCC65" opacity="0.2"/>
+  <circle cx="150" cy="150" r="40" fill="#4DD0E1" opacity="0.2"/>
+  
+  <!-- Main icon - stylized mountain/summit -->
+  <path d="M 100 60 L 140 120 L 60 120 Z" fill="#9CCC65"/>
+  <path d="M 80 100 L 120 100 L 100 70 Z" fill="#4DD0E1"/>
+  
+  <!-- Company initials -->
+  <text x="100" y="155" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">STS</text>
+</svg>

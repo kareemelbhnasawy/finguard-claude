@@ -2,7 +2,19 @@
 
 ## ✅ What Was Changed
 
-Your Finguard website now uses **JSON files** for managing team members and clients, making it much easier to add, remove, or edit entries without touching the codebase!
+Yo### Adding a New Client:
+
+1. Add logo to `/public/logos/` (e.g., `new-company.png`)
+2. Open `clients.json`
+3. Add a new entry:
+```json
+{
+  "name": "New Company",
+  "sector": "Banking & Finance",
+  "logo": "/logos/new-company.png"
+}
+```
+4. Save - Done! ✨website now uses **JSON files** for managing team members and clients, making it much easier to add, remove, or edit entries without touching the codebase!
 
 ### Files Created:
 
@@ -118,20 +130,21 @@ src/
 ### Client Object:
 ```typescript
 {
-  name: string;   // Company name
-  sector: string; // Sector display name
+  name: string;    // Company name
+  sector: string;  // Sector display name
+  logo?: string;   // Optional: Path to logo image
 }
 ```
 
 ### Available Sectors:
-- `banks` - Banking & Financial Services
-- `industrial` - Industrial & Manufacturing
-- `tourismHotels` - Tourism & Hotels
-- `constructionHousing` - Construction & Housing
-- `trading` - Trading & Distribution
-- `educationTelecom` - Education & Telecommunications
-- `agriculture` - Agriculture
-- `investment` - Investment & Securities
+- Banking & Finance
+- Manufacturing & Industrial
+- Tourism & Hotels
+- Construction & Housing
+- Trading
+- Education & Telecom
+- Agriculture
+- Investment
 
 ---
 
